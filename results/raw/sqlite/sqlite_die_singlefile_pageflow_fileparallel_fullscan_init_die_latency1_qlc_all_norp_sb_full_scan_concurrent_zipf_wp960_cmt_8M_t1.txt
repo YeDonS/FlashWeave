@@ -1,0 +1,805 @@
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=4)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[sqlite_init] config tables=80 total_rows=256000 logical_row_bytes=32768 est_row_pages=8 interleave_pages=209715 window_tables=80 window_pages_per_table=960 read_ops_per_event=512 strict_cold_per_select=1 direct_io=1 fast_init_profile=0 dummy_interleave=0 dummy_stripe_bytes=229376
+[sqlite_init] cold_read_config mode=full-scan-concurrent iters=1 read_repromotion=on ctrl_path=/proc/nvmev/read_repromotion
+[sqlite_init] test_phase_path=/sys/kernel/debug/nvmev/ftl0/test_phase cold_overwrite_pct=0
+[sqlite_init] cold_extra_append mode=concurrent target_bytes=5368709120 read_ratio=10.000 row_reads_per_batch=0 sleep_us=2000 read_sleep_every=8 write_sleep_every=8
+[sqlite_init] pageflow_mode=1 rrpad_die_count=8 window_tables=80 window_pages_per_table=960 window_passes_per_round=1 init_drop_cache_each_read=1 unit_pages=1(sqlite page)
+[sqlite_init] dio_main_db_open_ok=1 dio_main_db_open_fail=0
+[sqlite_init] read_event=1 completed tables=80 elapsed=127.974413s
+[sqlite_init] heat_epoch_advance phase=init-read-event paths=1 first=/sys/kernel/debug/nvmev/ftl0/heat_epoch
+[sqlite_init] read_event=2 completed tables=80 elapsed=241.166896s
+[sqlite_init] heat_epoch_advance phase=init-read-event paths=1 first=/sys/kernel/debug/nvmev/ftl0/heat_epoch
+[sqlite_init] read_event=3 completed tables=80 elapsed=350.961134s
+[sqlite_init] heat_epoch_advance phase=init-read-event paths=1 first=/sys/kernel/debug/nvmev/ftl0/heat_epoch
+[sqlite_init] read_event=4 completed tables=80 elapsed=475.080107s
+[sqlite_init] heat_epoch_advance phase=init-read-event paths=1 first=/sys/kernel/debug/nvmev/ftl0/heat_epoch
+[sqlite_init] read_event=5 completed tables=80 elapsed=616.952734s
+[sqlite_init] heat_epoch_advance phase=init-read-event paths=1 first=/sys/kernel/debug/nvmev/ftl0/heat_epoch
+[sqlite_init] read_event=6 completed tables=80 elapsed=766.054022s
+[sqlite_init] heat_epoch_advance phase=init-read-event paths=1 first=/sys/kernel/debug/nvmev/ftl0/heat_epoch
+[sqlite_init] read_event=7 completed tables=80 elapsed=1020.927358s
+[sqlite_init] heat_epoch_advance phase=init-read-event paths=1 first=/sys/kernel/debug/nvmev/ftl0/heat_epoch
+[sqlite_init] read_event=8 completed tables=80 elapsed=1136.138747s
+[sqlite_init] heat_epoch_advance phase=init-read-event paths=1 first=/sys/kernel/debug/nvmev/ftl0/heat_epoch
+[sqlite_init] read_event=9 completed tables=80 elapsed=1295.114918s
+[sqlite_init] heat_epoch_advance phase=init-read-event paths=1 first=/sys/kernel/debug/nvmev/ftl0/heat_epoch
+[sqlite_init] cold_extra_append_plan mode=concurrent target_bytes=5368709120 rows_per_table=2048 total_extra_rows=163840
+[sqlite_init] test_phase=on phase=cold-read-start paths=1 first=/sys/kernel/debug/nvmev/ftl0/test_phase
+[sqlite_cold_full_scan] table=0 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=0 thread=0 time=264.233535s rows=179200
+[sqlite_cold_full_scan] table=1 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=1 thread=0 time=128.512001s rows=89600
+[sqlite_cold_full_scan] table=2 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=2 thread=0 time=126.830021s rows=92800
+[sqlite_cold_full_scan] table=3 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=3 thread=0 time=59.314588s rows=41600
+[sqlite_cold_full_scan] table=4 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=4 thread=0 time=89.281609s rows=60800
+[sqlite_cold_full_scan] table=5 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=5 thread=0 time=55.860729s rows=38400
+[sqlite_cold_full_scan] table=6 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=6 thread=0 time=62.961530s rows=48000
+[sqlite_cold_full_scan] table=7 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=7 thread=0 time=88.494088s rows=60800
+[sqlite_cold_full_scan] table=8 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=8 thread=0 time=38.551250s rows=19200
+[sqlite_cold_full_scan] table=9 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=9 thread=0 time=39.826407s rows=32000
+[sqlite_cold_full_scan] table=10 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=10 thread=0 time=61.390241s rows=41600
+[sqlite_cold_full_scan] table=11 thread=0 [dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+ids=[0,3200)
+[sqlite_cold_full_scan] table=11 thread=0 time=34.184729s rows=19200
+[sqlite_cold_full_scan] table=12 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=12 thread=0 time=33.012190s rows=16000
+[sqlite_cold_full_scan] table=13 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=13 thread=0 time=50.796913s rows=32000
+[sqlite_cold_full_scan] table=14 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=14 thread=0 time=29.026320s rows=19200
+[sqlite_cold_full_scan] table=15 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=15 thread=0 time=29.683334s rows=22400
+[sqlite_cold_full_scan] table=16 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=16 thread=0 time=23.644009s rows=16000
+[sqlite_cold_full_scan] table=17 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=17 thread=0 time=33.587015s rows=19200
+[sqlite_cold_full_scan] table=18 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=18 thread=0 time=33.432807s rows=22400
+[sqlite_cold_full_scan] table=19 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=19 thread=0 time=35.230889s rows=16000
+[sqlite_cold_full_scan] table=20 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=20 thread=0 time=38.142254s rows=22400
+[sqlite_cold_full_scan] table=21 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=21 thread=0 time=23.251900s rows=12800
+[sqlite_cold_full_scan] table=22 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=22 thread=0 time=31.550806s rows=19200
+[sqlite_cold_full_scan] table=23 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=23 thread=0 time=15.250259s rows=6400
+[sqlite_cold_full_scan] table=24 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=24 thread=0 time=23.618298s rows=16000
+[sqlite_cold_full_scan] table=25 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=25 thread=0 time=34.555543s rows=16000
+[sqlite_cold_full_scan] table=26 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=26 thread=0 time=23.204345s rows=9600
+[sqlite_cold_full_scan] table=27 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=27 thread=0 time=30.000538s rows=16000
+[sqlite_cold_full_scan] table=28 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=28 thread=0 time=30.068558s rows=12800
+[sqlite_cold_full_scan] table=29 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=29 thread=0 time=29.590540s rows=12800
+[sqlite_cold_full_scan] table=30 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=30 thread=0 time=23.622850s rows=16000
+[sqlite_cold_full_scan] table=31 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=31 thread=0 time=34.017514s rows=22400
+[sqlite_cold_full_scan] table=32 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=32 thread=0 time=33.770658s rows=16000
+[sqlite_cold_full_scan] table=33 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=33 thread=0 time=29.316323s rows=16000
+[sqlite_cold_full_scan] table=34 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=34 thread=0 time=26.344067s rows=9600
+[sqlite_cold_full_scan] table=35 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=35 thread=0 time=6.400297s rows=3200
+[sqlite_cold_full_scan] table=36 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=36 thread=0 time=30.436566s rows=12800
+[sqlite_cold_full_scan] table=37 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=37 thread=0 time=17.230824s rows=9600
+[sqlite_cold_full_scan] table=38 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=38 thread=0 time=25.864168s rows=12800
+[sqlite_cold_full_scan] table=39 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=39 thread=0 time=22.363741s rows=12800
+[sqlite_cold_full_scan] table=40 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=40 thread=0 time=46.045425s rows=32000
+[sqlite_cold_full_scan] table=41 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=41 thread=0 time=16.195730s rows=9600
+[sqlite_cold_full_scan] table=42 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=42 thread=0 time=20.026530s rows=12800
+[sqlite_cold_full_scan] table=43 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=43 thread=0 time=15.138781s rows=6400
+[sqlite_cold_full_scan] table=44 thread=0 ids=[0,3200)[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+
+[sqlite_cold_full_scan] table=44 thread=0 time=25.648942s rows=9600
+[sqlite_cold_full_scan] table=45 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=45 thread=0 time=23.047192s rows=12800
+[sqlite_cold_full_scan] table=46 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=46 thread=0 time=18.680369s rows=12800
+[sqlite_cold_full_scan] table=47 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=47 thread=0 time=14.892502s rows=3200
+[sqlite_cold_full_scan] table=48 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=48 thread=0 time=24.954106s rows=12800
+[sqlite_cold_full_scan] table=49 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=49 thread=0 time=23.136501s rows=12800
+[sqlite_cold_full_scan] table=50 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=50 thread=0 time=33.815898s rows=16000
+[sqlite_cold_full_scan] table=51 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=51 thread=0 time=12.327564s rows=6400
+[sqlite_cold_full_scan] table=52 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=52 thread=0 time=37.742209s rows=16000
+[sqlite_cold_full_scan] table=53 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=53 thread=0 time=32.958918s rows=19200
+[sqlite_cold_full_scan] table=54 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=54 thread=0 time=16.139542s rows=6400
+[sqlite_cold_full_scan] table=55 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=55 thread=0 time=24.250631s rows=12800
+[sqlite_cold_full_scan] table=56 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=56 thread=0 time=32.446616s rows=16000
+[sqlite_cold_full_scan] table=57 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=57 thread=0 time=19.864900s rows=12800
+[sqlite_cold_full_scan] table=58 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=58 thread=0 time=16.625431s rows=9600
+[sqlite_cold_full_scan] table=59 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=59 thread=0 time=27.748580s rows=12800
+[sqlite_cold_full_scan] table=60 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=60 thread=0 time=20.938640s rows=12800
+[sqlite_cold_full_scan] table=61 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=61 thread=0 time=28.712628s rows=12800
+[sqlite_cold_full_scan] table=62 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=62 thread=0 time=26.378221s rows=9600
+[sqlite_cold_full_scan] table=63 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=63 thread=0 time=35.068164s rows=16000
+[sqlite_cold_full_scan] table=64 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=64 thread=0 time=54.622196s rows=25600
+[sqlite_cold_full_scan] table=65 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=65 thread=0 time=25.511438s rows=12800
+[sqlite_cold_full_scan] table=66 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=66 thread=0 time=23.677661s rows=12800
+[sqlite_cold_full_scan] table=67 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=67 thread=0 time=17.999617s rows=9600
+[sqlite_cold_full_scan] table=68 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=68 thread=0 time=15.890473s rows=12800
+[sqlite_cold_full_scan] table=69 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=69 thread=0 time=5.627701s rows=3200
+[sqlite_cold_full_scan] table=70 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=70 thread=0 time=10.773081s rows=6400
+[sqlite_cold_full_scan] table=71 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=71 thread=0 time=13.185422s rows=9600
+[sqlite_cold_full_scan] table=72 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=72 thread=0 time=17.526483s rows=12800
+[sqlite_cold_full_scan] table=73 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=73 thread=0 time=14.048670s rows=9600
+[sqlite_cold_full_scan] table=74 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=74 thread=0 time=10.510023s rows=6400
+[sqlite_cold_full_scan] table=75 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=75 thread=0 time=13.530249s rows=9600
+[sqlite_cold_full_scan] table=76 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=76 thread=0 time=13.665130s rows=9600
+[sqlite_cold_full_scan] table=77 thread=0 ids=[0,3200)
+[sqlite_cold_full_[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8 (fd=7)
+[table_tier] partition offset 1048576 bytes (256 FTL pages) applied to FIEMAP extents
+scan] table=77 thread=0 time=17.255903s rows=12800
+[sqlite_cold_full_scan] table=78 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=78 thread=0 time=10.770265s rows=6400
+[sqlite_cold_full_scan] table=79 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=79 thread=0 time=16.279088s rows=12800
+[sqlite_cold_full_scan] threads=1 total_rows=1638400 wall_time=2720.486744s throughput=18.82MB/s
+[sqlite_init] test_phase=off phase=cold-read-end paths=1 first=/sys/kernel/debug/nvmev/ftl0/test_phase
+[sqlite_init] row_stats=./result/sqlite_row_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1 table_stats=./result/sqlite_table_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8M_
+[sqlite_init] table_tier=./result/sqlite_table_tier_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cm page_tier_entries=3250068 page_die_entries=3250068 access_entries=16777216
+[sqlite_init] table_die=./result/sqlite_table_die_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt die_slots=8
+[sqlite_init] coldest_10pct_tables=8 avg_latency=1.835208s
+[sqlite_init] tag=die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1 tables=80 total_rows=256000 read_events=9 interleaved_read_time=6030.370329s cold_full_read=2720.486744s cold_full_read_tp=18.82MB/s cold_mode=full-scan-concurrent cold_iters=1 cold_read_repromotion=on db=./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8
+[sqlite_init] cold_extra_append mode=concurrent target_bytes=5368709120 actual_payload_bytes=5368709120 rows_written=163840 page_growth=1188000 append_time=3676.430908s stage_total=3676.433106s
+[sqlite_init] pageflow phase_pad_events=23 phase_pad_bytes=94208
+[sqlite_cold_table] table=tbl_00 rows=3200 time=264.479036s throughput=21.17MB/s
+[sqlite_cold_table] table=tbl_01 rows=3200 time=128.514282s throughput=21.79MB/s
+[sqlite_cold_table] table=tbl_02 rows=3200 time=126.832214s throughput=22.86MB/s
+[sqlite_cold_table] table=tbl_03 rows=3200 time=59.316541s throughput=21.92MB/s
+[sqlite_cold_table] table=tbl_04 rows=3200 time=89.283740s throughput=21.28MB/s
+[sqlite_cold_table] table=tbl_05 rows=3200 time=55.862727s throughput=21.48MB/s
+[sqlite_cold_table] table=tbl_06 rows=3200 time=62.963648s throughput=23.82MB/s
+[sqlite_cold_table] table=tbl_07 rows=3200 time=88.495796s throughput=21.47MB/s
+[sqlite_cold_table] table=tbl_08 rows=3200 time=38.553244s throughput=15.56MB/s
+[sqlite_cold_table] table=tbl_09 rows=3200 time=39.828152s throughput=25.11MB/s
+[sqlite_cold_table] table=tbl_10 rows=3200 time=61.391512s throughput=21.18MB/s
+[sqlite_cold_table] table=tbl_11 rows=3200 time=34.186630s throughput=17.55MB/s
+[sqlite_cold_table] table=tbl_12 rows=3200 time=33.013338s throughput=15.15MB/s
+[sqlite_cold_table] table=tbl_13 rows=3200 time=50.798330s throughput=19.69MB/s
+[sqlite_cold_table] table=tbl_14 rows=3200 time=29.028398s throughput=20.67MB/s
+[sqlite_cold_table] table=tbl_15 rows=3200 time=29.684749s throughput=23.58MB/s
+[sqlite_cold_table] table=tbl_16 rows=3200 time=23.645989s throughput=21.15MB/s
+[sqlite_cold_table] table=tbl_17 rows=3200 time=33.588299s throughput=17.86MB/s
+[sqlite_cold_table] table=tbl_18 rows=3200 time=33.434444s throughput=20.94MB/s
+[sqlite_cold_table] table=tbl_19 rows=3200 time=35.232509s throughput=14.19MB/s
+[sqlite_cold_table] table=tbl_20 rows=3200 time=38.143489s throughput=18.35MB/s
+[sqlite_cold_table] table=tbl_21 rows=3200 time=23.253363s throughput=17.20MB/s
+[sqlite_cold_table] table=tbl_22 rows=3200 time=31.552550s throughput=19.02MB/s
+[sqlite_cold_table] table=tbl_23 rows=3200 time=15.251574s throughput=13.11MB/s
+[sqlite_cold_table] table=tbl_24 rows=3200 time=23.619442s throughput=21.17MB/s
+[sqlite_cold_table] table=tbl_25 rows=3200 time=34.556907s throughput=14.47MB/s
+[sqlite_cold_table] table=tbl_26 rows=3200 time=23.206187s throughput=12.93MB/s
+[sqlite_cold_table] table=tbl_27 rows=3200 time=30.001860s throughput=16.67MB/s
+[sqlite_cold_table] table=tbl_28 rows=3200 time=30.070113s throughput=13.30MB/s
+[sqlite_cold_table] table=tbl_29 rows=3200 time=29.592823s throughput=13.52MB/s
+[sqlite_cold_table] table=tbl_30 rows=3200 time=23.624272s throughput=21.16MB/s
+[sqlite_cold_table] table=tbl_31 rows=3200 time=34.019061s throughput=20.58MB/s
+[sqlite_cold_table] table=tbl_32 rows=3200 time=33.772271s throughput=14.81MB/s
+[sqlite_cold_table] table=tbl_33 rows=3200 time=29.317629s throughput=17.05MB/s
+[sqlite_cold_table] table=tbl_34 rows=3200 time=26.345489s throughput=11.39MB/s
+[sqlite_cold_table] table=tbl_35 rows=3200 time=6.402360s throughput=15.62MB/s
+[sqlite_cold_table] table=tbl_36 rows=3200 time=30.438432s throughput=13.14MB/s
+[sqlite_cold_table] table=tbl_37 rows=3200 time=17.232234s throughput=17.41MB/s
+[sqlite_cold_table] table=tbl_38 rows=3200 time=25.865570s throughput=15.46MB/s
+[sqlite_cold_table] table=tbl_39 rows=3200 time=22.365424s throughput=17.88MB/s
+[sqlite_cold_table] table=tbl_40 rows=3200 time=46.047371s throughput=21.72MB/s
+[sqlite_cold_table] table=tbl_41 rows=3200 time=16.197023s throughput=18.52MB/s
+[sqlite_cold_table] table=tbl_42 rows=3200 time=20.027938s throughput=19.97MB/s
+[sqlite_cold_table] table=tbl_43 rows=3200 time=15.140701s throughput=13.21MB/s
+[sqlite_cold_table] table=tbl_44 rows=3200 time=25.650410s throughput=11.70MB/s
+[sqlite_cold_table] table=tbl_45 rows=3200 time=23.048484s throughput=17.35MB/s
+[sqlite_cold_table] table=tbl_46 rows=3200 time=18.681525s throughput=21.41MB/s
+[sqlite_cold_table] table=tbl_47 rows=3200 time=14.893884s throughput=6.71MB/s
+[sqlite_cold_table] table=tbl_48 rows=3200 time=24.956344s throughput=16.03MB/s
+[sqlite_cold_table] table=tbl_49 rows=3200 time=23.137869s throughput=17.29MB/s
+[sqlite_cold_table] table=tbl_50 rows=3200 time=33.817528s throughput=14.79MB/s
+[sqlite_cold_table] table=tbl_51 rows=3200 time=12.329367s throughput=16.22MB/s
+[sqlite_cold_table] table=tbl_52 rows=3200 time=37.744077s throughput=13.25MB/s
+[sqlite_cold_table] table=tbl_53 rows=3200 time=32.960132s throughput=18.20MB/s
+[sqlite_cold_table] table=tbl_54 rows=3200 time=16.140805s throughput=12.39MB/s
+[sqlite_cold_table] table=tbl_55 rows=3200 time=24.252724s throughput=16.49MB/s
+[sqlite_cold_table] table=tbl_56 rows=3200 time=32.447939s throughput=15.41MB/s
+[sqlite_cold_table] table=tbl_57 rows=3200 time=19.866238s throughput=20.13MB/s
+[sqlite_cold_table] table=tbl_58 rows=3200 time=16.627059s throughput=18.04MB/s
+[sqlite_cold_table] table=tbl_59 rows=3200 time=27.750740s throughput=14.41MB/s
+[sqlite_cold_table] table=tbl_60 rows=3200 time=20.939884s throughput=19.10MB/s
+[sqlite_cold_table] table=tbl_61 rows=3200 time=28.714100s throughput=13.93MB/s
+[sqlite_cold_table] table=tbl_62 rows=3200 time=26.379517s throughput=11.37MB/s
+[sqlite_cold_table] table=tbl_63 rows=3200 time=35.070038s throughput=14.26MB/s
+[sqlite_cold_table] table=tbl_64 rows=3200 time=54.623749s throughput=14.65MB/s
+[sqlite_cold_table] table=tbl_65 rows=3200 time=25.513385s throughput=15.68MB/s
+[sqlite_cold_table] table=tbl_66 rows=3200 time=23.678953s throughput=16.89MB/s
+[sqlite_cold_table] table=tbl_67 rows=3200 time=18.001002s throughput=16.67MB/s
+[sqlite_cold_table] table=tbl_68 rows=3200 time=15.891678s throughput=25.17MB/s
+[sqlite_cold_table] table=tbl_69 rows=3200 time=5.629663s throughput=17.76MB/s
+[sqlite_cold_table] table=tbl_70 rows=3200 time=10.774219s throughput=18.56MB/s
+[sqlite_cold_table] table=tbl_71 rows=3200 time=13.187090s throughput=22.75MB/s
+[sqlite_cold_table] table=tbl_72 rows=3200 time=17.528000s throughput=22.82MB/s
+[sqlite_cold_table] table=tbl_73 rows=3200 time=14.050023s throughput=21.35MB/s
+[sqlite_cold_table] table=tbl_74 rows=3200 time=10.511119s throughput=19.03MB/s
+[sqlite_cold_table] table=tbl_75 rows=3200 time=13.531697s throughput=22.17MB/s
+[sqlite_cold_table] table=tbl_76 rows=3200 time=13.666523s throughput=21.95MB/s
+[sqlite_cold_table] table=tbl_77 rows=3200 time=17.257954s throughput=23.18MB/s
+[sqlite_cold_table] table=tbl_78 rows=3200 time=10.771471s throughput=18.57MB/s
+[sqlite_cold_table] table=tbl_79 rows=3200 time=16.280499s throughput=24.57MB/s
+[sqlite_init] trace generated: ./device/sqlite_trace_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1_zipf.trace
+[sqlite_init] trace generated: ./device/sqlite_trace_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1_exp.trace
+[sqlite_init] trace generated: ./device/sqlite_trace_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1_normal.trace
+[sqlite_init] tag=die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1 rows=256000 approx_bytes=7.81 GiB heat=./result/sqlite_heat_die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t
+[die_affinity_stats]
+append_requests 3270
+append_effective 3084
+overwrite_requests 500866
+overwrite_effective 428520
+chains_allocated 0
+chain_block_migration_attempts 0
+chain_block_migration_pages 0
+chain_block_migration_skip_budget 0
+chain_chunk_migration_attempts 0
+chain_chunk_migration_pages 0
+chain_gc_to_qlc_pages 0
+[lpn_die_change_stats]
+tracked_lpns 3250068
+current_changed_lpns 2429699
+host_append_die_changed 89
+host_overwrite_die_changed 339
+gc_die_changed 207319
+slc_to_qlc_die_changed 2210035
+repromote_die_changed 0
+qlc_rebalance_die_changed 11917
+[test_phase_stats]
+active 0
+mechanism_source conv_ftl_latency1_superblock
+mechanism_scheduler v1_global_worker
+slc_migration_core page_level_cold_filter
+compile_read_repromotion_enabled 0
+compile_die_batched_repromotion_enabled 0
+compile_qlc_rebalance_enabled 1
+compile_qlc_hotcold_enabled 1
+compile_test_phase_repromotion_enabled 0
+compile_test_phase_qlc_rebalance_enabled 1
+test_phase_repromote_policy blocked
+read_requests 12707145
+test_phase_recent_write_guard_config 1
+test_phase_recent_write_guard_active 0
+test_phase_guard_read_reqs_config 256
+test_phase_guard_read_reqs 12707145
+test_phase_guard_epoch 49638
+test_phase_recent_guard_skips 0
+test_phase_recent_guard_forced 0
+overwrite_requests 495933
+bg_repromote_ops 0
+bg_qlc_rebalance_ops 16388
+read_bg_conflicts 430
+read_overwrite_conflicts 0
+read_die_conflicts 6815
+read_die_wait_ns 398582510
+host_read_nand_ops 17955943
+global_read_sum 78922339
+global_valid_pg_cnt 3247711
+mapped_pages 3250068
+mapped_phys_slc_pages 698173
+mapped_phys_qlc_pages 2551895
+mapped_flag_slc_pages 698173
+mapped_flag_qlc_pages 2551895
+mapped_tier_mismatch_pages 0
+mapped_qlc_fast_live_pages 1123763
+mapped_qlc_slow_live_pages 1428132
+host_read_slc_nand_ops 8198826
+host_read_qlc_nand_ops 9757117
+host_read_phys_slc_nand_ops 8198826
+host_read_phys_qlc_nand_ops 9757117
+host_read_tier_mismatch_nand_ops 0
+host_read_slc_pages 6999924
+host_read_qlc_pages 5707221
+host_read_phys_slc_pages 6999924
+host_read_phys_qlc_pages 5707221
+host_read_tier_mismatch_pages 0
+read_nand_bg_overlap_ops 285
+host_write_pages 1852362
+host_write_nand_ops 702995
+write_early_completion_reqs 515004
+slc_to_qlc_migration_pages 1392174
+slc_gc_valid_copy_pages 102902
+slc_gc_invalid_reclaimed_pages 1938954
+qlc_repromote_pages 0
+internal_write_pages_est 1511464
+internal_write_pages_per_host_write_x1000 815
+slc_to_qlc_nand_reads 1395194
+slc_to_qlc_nand_writes 1395194
+repromote_nand_reads 0
+repromote_nand_writes 0
+active_reads 0
+active_overwrites 0
+active_bg_ops 0
+[test_phase_stats_aggregate]
+active 0
+compile_read_repromotion_enabled 0
+compile_die_batched_repromotion_enabled 0
+compile_qlc_rebalance_enabled 1
+compile_qlc_hotcold_enabled 1
+compile_test_phase_repromotion_enabled 0
+compile_test_phase_qlc_rebalance_enabled 1
+read_requests 12707145
+test_phase_recent_write_guard_config 1
+test_phase_recent_write_guard_active 0
+test_phase_guard_read_reqs_config 256
+test_phase_guard_read_reqs 12707145
+test_phase_guard_epoch 49638
+test_phase_recent_guard_skips 0
+test_phase_recent_guard_forced 0
+overwrite_requests 495933
+bg_repromote_ops 0
+bg_qlc_rebalance_ops 16388
+read_bg_conflicts 430
+read_overwrite_conflicts 0
+read_die_conflicts 6815
+read_die_wait_ns 398582510
+host_read_nand_ops 17955943
+global_read_sum 78922339
+global_valid_pg_cnt 3247711
+mapped_pages 3250068
+mapped_phys_slc_pages 698173
+mapped_phys_qlc_pages 2551895
+mapped_flag_slc_pages 698173
+mapped_flag_qlc_pages 2551895
+mapped_tier_mismatch_pages 0
+mapped_qlc_fast_live_pages 1123763
+mapped_qlc_slow_live_pages 1428132
+host_read_slc_nand_ops 8198826
+host_read_qlc_nand_ops 9757117
+host_read_phys_slc_nand_ops 8198826
+host_read_phys_qlc_nand_ops 9757117
+host_read_tier_mismatch_nand_ops 0
+host_read_slc_pages 6999924
+host_read_qlc_pages 5707221
+host_read_phys_slc_pages 6999924
+host_read_phys_qlc_pages 5707221
+host_read_tier_mismatch_pages 0
+read_nand_bg_overlap_ops 285
+host_write_pages 1852362
+host_write_nand_ops 702995
+write_early_completion_reqs 515004
+slc_to_qlc_migration_pages 1392174
+slc_gc_valid_copy_pages 102902
+slc_gc_invalid_reclaimed_pages 1938954
+qlc_repromote_pages 0
+internal_write_pages_est 1511464
+internal_write_pages_per_host_write_x1000 815
+slc_to_qlc_nand_reads 1395194
+slc_to_qlc_nand_writes 1395194
+repromote_nand_reads 0
+repromote_nand_writes 0
+active_reads 0
+active_overwrites 0
+active_bg_ops 0
+[superblock_stats]
+# baseline superblock_stats: point-in-time counters; *_pct is integer percent
+mechanism_source conv_ftl_latency1_superblock
+mechanism_scheduler v1_global_worker
+slc_migration_core page_level_cold_filter
+compile_read_repromotion_enabled 0
+compile_die_batched_repromotion_enabled 0
+compile_qlc_rebalance_enabled 1
+compile_qlc_hotcold_enabled 1
+compile_test_phase_repromotion_enabled 0
+compile_test_phase_qlc_rebalance_enabled 1
+test_phase_repromote_policy blocked
+die_count 8
+slc_pages_per_superblock 2048
+qlc_pages_per_superblock 8192
+slc_pages_per_block 256
+qlc_pages_per_block 1024
+slc_host_active_superblocks 1
+active_valid_pages 548
+slc_host_active_limit 14
+qlc_host_active_superblocks 1
+qlc_host_active_limit 14
+slc_total_lines 512
+slc_free_lines 109
+slc_victim_lines 221
+slc_full_lines 180
+slc_free_line_pct 21
+qlc_total_lines 1920
+qlc_free_lines 1454
+qlc_victim_lines 331
+qlc_full_lines 133
+qlc_free_line_pct 75
+qlc_fast_pages 1123763
+qlc_slow_pages 1428132
+qlc_fast_page_pct 44
+qlc_closed_repromote_scans 0
+qlc_closed_repromote_pages 0
+hard_no_victim_count 0
+active_sealed_for_hard 0
+active_sealed_for_alloc_fail 0
+victim_pq_insert_fail 0
+victim_pq_duplicate_avoided 28568
+victim_pq_corrupt_pos 0
+victim_pq_max_size 26
+active_seal_migrated_pages 0
+active_seal_no_migrate 0
+slc_sb_fold_partial 0
+slc_sb_fold_resumes 0
+slc_sb_fold_completed 0
+slc_sb_fold_deferred_recent 0
+slc_sb_fold_yield_read_prio 0
+slc_sb_gc_count 1689
+slc_sb_gc_valid_pages 364401
+slc_sb_gc_invalid_pages 3094671
+slc_sb_gc_reclaim_eff_pct 89
+slc_sb_gc_erase_ops 13512
+slc_sb_gc_erase_time_ns 0
+slc_sb_gc_avg_erase_time_ns 0
+test_phase_read_die_wait_ns 398582510
+heat_epoch 10
+migration_read_path_time_ns 0
+[die_stats]
+die0 reads=9849128 conflicts=932 wait_ns=57243888
+die1 reads=9825329 conflicts=943 wait_ns=60687468
+die2 reads=9837703 conflicts=729 wait_ns=41035474
+die3 reads=9841979 conflicts=785 wait_ns=34905477
+die4 reads=9901320 conflicts=980 wait_ns=59538141
+die5 reads=9895706 conflicts=802 wait_ns=48985283
+die6 reads=9898719 conflicts=836 wait_ns=51415123
+die7 reads=9852545 conflicts=838 wait_ns=46382386
+[bg_nand_stats]
+busy_ns=0 read_ns=0 write_ns=0 erase_ns=0 read_ops=0 write_ops=0 erase_ops=0 read_prio_bypass_ops=0 read_prio_bypass_ns=0 read_prio_ch_bypass_ops=0 read_prio_ch_bypass_ns=0 read_prio_pcie_bypass_ops=0 read_prio_pcie_bypass_ns=0 lp_host_write_ops=0 lp_host_write_ns=0
+[kernel_tail_status] status=captured mode=time-default start_line=11325 end_line=11556 start_boot_s=12682.49 start_filter_s=12681.490000 time_slack_s=1 matches=209
+[kernel_tail]
+[19081.165433] NVMeVirt: heat_epoch advanced by 1 to 10
+[19081.165512] NVMeVirt: [TEST_PHASE] enter
+[19081.168460] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=103 backlog_blocked=1 cooldown_blocked=0 sb_scan_visits=186 valid_pages_sampled=365380 migrated=192817 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=29.5 global_read_sum=60946591 global_valid_pg_cnt=2062004 valid_seen=365380 skip_hot=172563 skip_recent=0 skip_not_slc=0 skip_queued=7 skip_active=0 skip_empty=0 move_fail=0 gc_sb=102 gc_invalid=194168 gc_valid=14728 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=67/512(13%) slc_full=388(75%) slc_victim=55(10%) thres(mig/soft/hard)=154/103/52
+[19103.211162] NVMeVirt: Write Stats: SLC writes=2080000, QLC writes=0, Migrations=1156780
+[19111.168678] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=17720 backlog_blocked=17720 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=29.5 global_read_sum=61115040 global_valid_pg_cnt=2070228 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=60/512(11%) slc_full=387(75%) slc_victim=63(12%) thres(mig/soft/hard)=154/103/52
+[19141.169784] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=17211 backlog_blocked=17211 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=29.4 global_read_sum=61283088 global_valid_pg_cnt=2078308 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=54/512(10%) slc_full=387(75%) slc_victim=69(13%) thres(mig/soft/hard)=154/103/52
+[19148.131155] [nvmev] [mark_page_valid] Page not FREE: status=2 at ch=3,lun=1,blk=414,pg=216
+[19148.742313] NVMeVirt: SLOW_PATH: nvmev_proc_io_sq took 1107896691 ns! Processed 32 reqs. Avg: 34621771 ns/req
+[19149.017400] [nvmev] [mark_page_valid] Page not FREE: status=2 at ch=2,lun=1,blk=417,pg=200
+[19149.034908] [nvmev] [mark_page_valid] Page not FREE: status=2 at ch=2,lun=0,blk=417,pg=216
+[19149.038693] [nvmev] [mark_page_valid] Page not FREE: status=2 at ch=3,lun=1,blk=417,pg=223
+[19149.041275] [nvmev] [mark_page_valid] Page not FREE: status=2 at ch=0,lun=0,blk=417,pg=214
+[19149.042884] [nvmev] [mark_page_valid] Page not FREE: status=2 at ch=0,lun=1,blk=417,pg=207
+[19149.048751] [nvmev] [mark_page_valid] Page not FREE: status=2 at ch=0,lun=0,blk=417,pg=244
+[19149.049536] [nvmev] [mark_page_valid] Page not FREE: status=2 at ch=0,lun=0,blk=417,pg=254
+[19149.717145] [nvmev] [mark_page_valid] Page not FREE: status=2 at ch=1,lun=1,blk=422,pg=163
+[19149.738730] [nvmev] [mark_page_valid] Page not FREE: status=2 at ch=1,lun=1,blk=422,pg=212
+[19149.743617] [nvmev] [mark_page_valid] Page not FREE: status=2 at ch=1,lun=0,blk=422,pg=229
+[19149.745885] [nvmev] [mark_page_valid] Page not FREE: status=2 at ch=1,lun=1,blk=422,pg=233
+[19149.749876] [nvmev] [mark_page_valid] Page not FREE: status=2 at ch=3,lun=0,blk=422,pg=247
+[19149.750648] [nvmev] [mark_page_valid] Page not FREE: status=2 at ch=2,lun=1,blk=422,pg=225
+[19149.788383] NVMeVirt: SLOW_PATH: nvmev_proc_io_sq took 1041634378 ns! Processed 32 reqs. Avg: 32551074 ns/req
+[19171.653437] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=15445 backlog_blocked=15368 cooldown_blocked=0 sb_scan_visits=253 valid_pages_sampled=415926 migrated=143036 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=29.4 global_read_sum=61445200 global_valid_pg_cnt=2085725 valid_seen=340868 skip_hot=197801 skip_recent=0 skip_not_slc=0 skip_queued=15 skip_active=0 skip_empty=0 move_fail=31 gc_sb=77 gc_invalid=143447 gc_valid=14249 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=118/512(23%) slc_full=315(61%) slc_victim=77(15%) thres(mig/soft/hard)=154/103/52
+[19177.066273] NVMeVirt: Write Stats: SLC writes=2110000, QLC writes=0, Migrations=1298909
+[19192.294474] NVMeVirt: Write Stats: SLC writes=2120000, QLC writes=0, Migrations=1298909
+[19201.653364] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=25328 backlog_blocked=25328 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=29.3 global_read_sum=61522835 global_valid_pg_cnt=2097548 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=109/512(21%) slc_full=315(61%) slc_victim=86(16%) thres(mig/soft/hard)=154/103/52
+[19208.926323] NVMeVirt: Write Stats: SLC writes=2130000, QLC writes=0, Migrations=1298909
+[19232.989918] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=21196 backlog_blocked=21196 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=29.2 global_read_sum=61669283 global_valid_pg_cnt=2107725 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=101/512(19%) slc_full=315(61%) slc_victim=94(18%) thres(mig/soft/hard)=154/103/52
+[19263.395488] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=18514 backlog_blocked=18514 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=29.2 global_read_sum=61837733 global_valid_pg_cnt=2116445 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=94/512(18%) slc_full=315(61%) slc_victim=101(19%) thres(mig/soft/hard)=154/103/52
+[19294.433689] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=18428 backlog_blocked=18428 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=29.1 global_read_sum=62006183 global_valid_pg_cnt=2125165 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=88/512(17%) slc_full=315(61%) slc_victim=107(20%) thres(mig/soft/hard)=154/103/52
+[19324.620170] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=19695 backlog_blocked=19695 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=29.1 global_read_sum=62151829 global_valid_pg_cnt=2134445 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=81/512(15%) slc_full=315(61%) slc_victim=114(22%) thres(mig/soft/hard)=154/103/52
+[19354.620819] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=15002 backlog_blocked=15002 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=29.1 global_read_sum=62342285 global_valid_pg_cnt=2141405 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=75/512(14%) slc_full=315(61%) slc_victim=120(23%) thres(mig/soft/hard)=154/103/52
+[19370.069767] NVMeVirt: Write Stats: SLC writes=2200000, QLC writes=0, Migrations=1298909
+[19384.695626] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=15631 backlog_blocked=15631 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=29.0 global_read_sum=62533138 global_valid_pg_cnt=2148925 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=70/512(13%) slc_full=315(61%) slc_victim=125(24%) thres(mig/soft/hard)=154/103/52
+[19390.503559] NVMeVirt: Write Stats: SLC writes=2210000, QLC writes=0, Migrations=1298909
+[19408.667113] NVMeVirt: Write Stats: SLC writes=2220000, QLC writes=0, Migrations=1298909
+[19414.719640] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=24750 backlog_blocked=24750 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=28.9 global_read_sum=62633979 global_valid_pg_cnt=2160525 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=61/512(11%) slc_full=315(61%) slc_victim=134(26%) thres(mig/soft/hard)=154/103/52
+[19427.436263] NVMeVirt: Write Stats: SLC writes=2230000, QLC writes=0, Migrations=1298909
+[19445.855273] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=18457 backlog_blocked=18457 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=28.9 global_read_sum=62802429 global_valid_pg_cnt=2169245 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=54/512(10%) slc_full=315(61%) slc_victim=141(27%) thres(mig/soft/hard)=154/103/52
+[19456.666182] [nvmev] [mark_page_valid] Page not FREE: status=2 at ch=2,lun=0,blk=75,pg=197
+[19456.679303] [nvmev] [mark_page_valid] Page not FREE: status=2 at ch=0,lun=0,blk=75,pg=212
+[19456.682090] [nvmev] [mark_page_valid] Page not FREE: status=2 at ch=0,lun=0,blk=75,pg=232
+[19456.686337] [nvmev] [mark_page_valid] Page not FREE: status=2 at ch=2,lun=1,blk=76,pg=0
+[19457.675474] NVMeVirt: SLOW_PATH: nvmev_proc_io_sq took 1136264347 ns! Processed 32 reqs. Avg: 35508260 ns/req
+[19475.856156] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=16583 backlog_blocked=16476 cooldown_blocked=0 sb_scan_visits=321 valid_pages_sampled=519545 migrated=209115 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=28.9 global_read_sum=62967867 global_valid_pg_cnt=2176733 valid_seen=408311 skip_hot=199128 skip_recent=0 skip_not_slc=0 skip_queued=14 skip_active=0 skip_empty=0 move_fail=68 gc_sb=106 gc_invalid=210547 gc_valid=6541 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=151/512(29%) slc_full=213(41%) slc_victim=146(28%) thres(mig/soft/hard)=154/103/52
+[19506.147437] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=17757 backlog_blocked=17757 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=28.8 global_read_sum=63136320 global_valid_pg_cnt=2185415 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=145/512(28%) slc_full=213(41%) slc_victim=152(29%) thres(mig/soft/hard)=154/103/52
+[19536.943416] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=21206 backlog_blocked=21206 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=28.8 global_read_sum=63282447 global_valid_pg_cnt=2195255 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=137/512(26%) slc_full=213(41%) slc_victim=160(31%) thres(mig/soft/hard)=154/103/52
+[19566.943390] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=15503 backlog_blocked=15503 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=28.8 global_read_sum=63472899 global_valid_pg_cnt=2202400 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=132/512(25%) slc_full=213(41%) slc_victim=165(32%) thres(mig/soft/hard)=154/103/52
+[19596.944561] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=19829 backlog_blocked=19829 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=28.7 global_read_sum=63618545 global_valid_pg_cnt=2211817 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=125/512(24%) slc_full=213(41%) slc_victim=172(33%) thres(mig/soft/hard)=154/103/52
+[19628.578296] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=17472 backlog_blocked=17472 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=28.7 global_read_sum=63786999 global_valid_pg_cnt=2220215 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=118/512(23%) slc_full=213(41%) slc_victim=179(34%) thres(mig/soft/hard)=154/103/52
+[19642.105382] NVMeVirt: Write Stats: SLC writes=2320000, QLC writes=0, Migrations=1506616
+[19658.577937] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=15250 backlog_blocked=15250 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=28.7 global_read_sum=63954246 global_valid_pg_cnt=2227175 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=113/512(22%) slc_full=213(41%) slc_victim=184(35%) thres(mig/soft/hard)=154/103/52
+[19663.964975] NVMeVirt: Write Stats: SLC writes=2330000, QLC writes=0, Migrations=1506616
+[19688.578465] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=14358 backlog_blocked=14358 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=28.7 global_read_sum=64144702 global_valid_pg_cnt=2234135 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=108/512(21%) slc_full=213(41%) slc_victim=189(36%) thres(mig/soft/hard)=154/103/52
+[19693.027131] NVMeVirt: Write Stats: SLC writes=2340000, QLC writes=0, Migrations=1506616
+[19711.697423] NVMeVirt: Write Stats: SLC writes=2350000, QLC writes=0, Migrations=1506616
+[19718.579262] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=23239 backlog_blocked=23239 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=28.6 global_read_sum=64244740 global_valid_pg_cnt=2245095 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=100/512(19%) slc_full=213(41%) slc_victim=197(38%) thres(mig/soft/hard)=154/103/52
+[19748.579785] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=17187 backlog_blocked=17187 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=28.5 global_read_sum=64412789 global_valid_pg_cnt=2253144 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=93/512(18%) slc_full=213(41%) slc_victim=204(39%) thres(mig/soft/hard)=154/103/52
+[19779.110278] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=13658 backlog_blocked=13658 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=28.5 global_read_sum=64603245 global_valid_pg_cnt=2259655 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=89/512(17%) slc_full=213(41%) slc_victim=208(40%) thres(mig/soft/hard)=154/103/52
+[19809.803981] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=18384 backlog_blocked=18384 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=28.5 global_read_sum=64748494 global_valid_pg_cnt=2268295 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=82/512(16%) slc_full=213(41%) slc_victim=215(41%) thres(mig/soft/hard)=154/103/52
+[19839.804028] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=16487 backlog_blocked=16487 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=28.5 global_read_sum=64916222 global_valid_pg_cnt=2275895 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=76/512(14%) slc_full=213(41%) slc_victim=221(43%) thres(mig/soft/hard)=154/103/52
+[19869.805842] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=17401 backlog_blocked=17401 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=28.4 global_read_sum=65084272 global_valid_pg_cnt=2283975 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=70/512(13%) slc_full=213(41%) slc_victim=227(44%) thres(mig/soft/hard)=154/103/52
+[19899.805820] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=18989 backlog_blocked=18989 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=28.4 global_read_sum=65229520 global_valid_pg_cnt=2292963 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=63/512(12%) slc_full=213(41%) slc_victim=234(45%) thres(mig/soft/hard)=154/103/52
+[19925.276676] NVMeVirt: Write Stats: SLC writes=2440000, QLC writes=0, Migrations=1506616
+[19931.677448] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=16128 backlog_blocked=16128 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=28.4 global_read_sum=65420774 global_valid_pg_cnt=2300775 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=57/512(11%) slc_full=213(41%) slc_victim=240(46%) thres(mig/soft/hard)=154/103/52
+[19948.719656] NVMeVirt: Write Stats: SLC writes=2450000, QLC writes=0, Migrations=1506616
+[19951.023368] [nvmev] [mark_page_valid] Page not FREE: status=2 at ch=3,lun=1,blk=238,pg=207
+[19951.628541] NVMeVirt: SLOW_PATH: nvmev_proc_io_sq took 1326487920 ns! Processed 9 reqs. Avg: 147387546 ns/req
+[19962.289734] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=16901 backlog_blocked=16843 cooldown_blocked=0 sb_scan_visits=203 valid_pages_sampled=321922 migrated=101203 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=28.3 global_read_sum=65563997 global_valid_pg_cnt=2308867 valid_seen=267826 skip_hot=166575 skip_recent=0 skip_not_slc=0 skip_queued=9 skip_active=0 skip_empty=0 move_fail=48 gc_sb=58 gc_invalid=112743 gc_valid=6041 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=106/512(20%) slc_full=175(34%) slc_victim=229(44%) thres(mig/soft/hard)=154/103/52
+[19992.393123] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=18454 backlog_blocked=18454 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=28.3 global_read_sum=65662912 global_valid_pg_cnt=2317587 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=99/512(19%) slc_full=175(34%) slc_victim=236(46%) thres(mig/soft/hard)=154/103/52
+[20022.392581] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=14462 backlog_blocked=14462 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=28.3 global_read_sum=65829762 global_valid_pg_cnt=2324322 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=94/512(18%) slc_full=175(34%) slc_victim=241(47%) thres(mig/soft/hard)=154/103/52
+[20026.494842] NVMeVirt: Write Stats: SLC writes=2480000, QLC writes=0, Migrations=1607064
+[20052.392822] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=15254 backlog_blocked=15254 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=28.3 global_read_sum=65996869 global_valid_pg_cnt=2331506 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=89/512(17%) slc_full=175(34%) slc_victim=246(48%) thres(mig/soft/hard)=154/103/52
+[20052.585711] NVMeVirt: Write Stats: SLC writes=2490000, QLC writes=0, Migrations=1607064
+[20076.670999] NVMeVirt: Write Stats: SLC writes=2500000, QLC writes=0, Migrations=1607064
+[20082.876113] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=15945 backlog_blocked=15945 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=28.2 global_read_sum=66165142 global_valid_pg_cnt=2339027 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=83/512(16%) slc_full=175(34%) slc_victim=252(49%) thres(mig/soft/hard)=154/103/52
+[20112.875838] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=18212 backlog_blocked=18212 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=28.2 global_read_sum=66287025 global_valid_pg_cnt=2347107 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=77/512(15%) slc_full=175(34%) slc_victim=258(50%) thres(mig/soft/hard)=154/103/52
+[20142.986912] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=12070 backlog_blocked=12070 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=28.2 global_read_sum=66430275 global_valid_pg_cnt=2353027 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=72/512(14%) slc_full=175(34%) slc_victim=263(51%) thres(mig/soft/hard)=154/103/52
+[20172.986523] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=22067 backlog_blocked=22067 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=28.1 global_read_sum=66506711 global_valid_pg_cnt=2363355 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=64/512(12%) slc_full=175(34%) slc_victim=271(52%) thres(mig/soft/hard)=154/103/52
+[20175.666613] NVMeVirt: Write Stats: SLC writes=2540000, QLC writes=0, Migrations=1607064
+[20204.356384] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=13597 backlog_blocked=13597 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=28.1 global_read_sum=66697174 global_valid_pg_cnt=2369827 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=59/512(11%) slc_full=175(34%) slc_victim=276(53%) thres(mig/soft/hard)=154/103/52
+[20204.589191] NVMeVirt: Write Stats: SLC writes=2550000, QLC writes=0, Migrations=1607064
+[20231.295544] NVMeVirt: Write Stats: SLC writes=2560000, QLC writes=0, Migrations=1607064
+[20236.177991] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=15944 backlog_blocked=15944 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=28.1 global_read_sum=66841627 global_valid_pg_cnt=2377347 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=54/512(10%) slc_full=175(34%) slc_victim=281(54%) thres(mig/soft/hard)=154/103/52
+[20266.177941] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=10127 backlog_blocked=10054 cooldown_blocked=0 sb_scan_visits=341 valid_pages_sampled=500867 migrated=92326 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=28.1 global_read_sum=67007907 global_valid_pg_cnt=2381598 valid_seen=408385 skip_hot=316026 skip_recent=0 skip_not_slc=0 skip_queued=21 skip_active=0 skip_empty=0 move_fail=33 gc_sb=71 gc_invalid=143472 gc_valid=1936 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=120/512(23%) slc_full=175(34%) slc_victim=215(41%) thres(mig/soft/hard)=154/103/52
+[20267.192061] NVMeVirt: Write Stats: SLC writes=2570000, QLC writes=0, Migrations=1699294
+[20298.135469] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=10248 backlog_blocked=10248 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=28.1 global_read_sum=67173963 global_valid_pg_cnt=2386692 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=116/512(22%) slc_full=175(34%) slc_victim=219(42%) thres(mig/soft/hard)=154/103/52
+[20328.135835] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=15372 backlog_blocked=15372 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=28.1 global_read_sum=67294808 global_valid_pg_cnt=2393715 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=111/512(21%) slc_full=175(34%) slc_victim=224(43%) thres(mig/soft/hard)=154/103/52
+[20358.136495] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=14584 backlog_blocked=14584 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=28.0 global_read_sum=67438860 global_valid_pg_cnt=2400612 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=106/512(20%) slc_full=175(34%) slc_victim=229(44%) thres(mig/soft/hard)=154/103/52
+[20390.411187] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=17781 backlog_blocked=17781 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=28.0 global_read_sum=67560909 global_valid_pg_cnt=2409252 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=99/512(19%) slc_full=175(34%) slc_victim=236(46%) thres(mig/soft/hard)=154/103/52
+[20422.538305] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=16050 backlog_blocked=16050 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=28.0 global_read_sum=67705362 global_valid_pg_cnt=2416852 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=93/512(18%) slc_full=175(34%) slc_victim=242(47%) thres(mig/soft/hard)=154/103/52
+[20435.751902] NVMeVirt: Write Stats: SLC writes=2630000, QLC writes=0, Migrations=1699294
+[20452.538579] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=16152 backlog_blocked=16152 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=27.9 global_read_sum=67826609 global_valid_pg_cnt=2424372 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=88/512(17%) slc_full=175(34%) slc_victim=247(48%) thres(mig/soft/hard)=154/103/52
+[20484.910549] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=13313 backlog_blocked=13313 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=27.9 global_read_sum=67970260 global_valid_pg_cnt=2430772 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=83/512(16%) slc_full=175(34%) slc_victim=252(49%) thres(mig/soft/hard)=154/103/52
+[20517.712647] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=11048 backlog_blocked=11048 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=27.9 global_read_sum=68113113 global_valid_pg_cnt=2435972 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=79/512(15%) slc_full=175(34%) slc_victim=256(50%) thres(mig/soft/hard)=154/103/52
+[20548.516006] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=14712 backlog_blocked=14712 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=27.9 global_read_sum=68233959 global_valid_pg_cnt=2442932 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=74/512(14%) slc_full=175(34%) slc_victim=261(50%) thres(mig/soft/hard)=154/103/52
+[20578.514866] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=16576 backlog_blocked=16576 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=27.8 global_read_sum=68332000 global_valid_pg_cnt=2450514 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=68/512(13%) slc_full=175(34%) slc_victim=267(52%) thres(mig/soft/hard)=154/103/52
+[20608.683659] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=11573 backlog_blocked=11573 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=27.8 global_read_sum=68452044 global_valid_pg_cnt=2456292 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=63/512(12%) slc_full=175(34%) slc_victim=272(53%) thres(mig/soft/hard)=154/103/52
+[20641.921271] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=17242 backlog_blocked=17242 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=27.8 global_read_sum=68573692 global_valid_pg_cnt=2464372 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=57/512(11%) slc_full=175(34%) slc_victim=278(54%) thres(mig/soft/hard)=154/103/52
+[20675.128063] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=20291 backlog_blocked=20187 cooldown_blocked=0 sb_scan_visits=340 valid_pages_sampled=411934 migrated=134383 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=27.7 global_read_sum=68681572 global_valid_pg_cnt=2474163 valid_seen=315549 skip_hot=181134 skip_recent=0 skip_not_slc=0 skip_queued=15 skip_active=0 skip_empty=0 move_fail=32 gc_sb=104 gc_invalid=209938 gc_valid=3054 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=153/512(29%) slc_full=175(34%) slc_victim=182(35%) thres(mig/soft/hard)=154/103/52
+[20705.127440] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=10633 backlog_blocked=10633 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=27.7 global_read_sum=68824021 global_valid_pg_cnt=2479014 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=149/512(29%) slc_full=175(34%) slc_victim=186(36%) thres(mig/soft/hard)=154/103/52
+[20737.337888] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=13776 backlog_blocked=13776 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=27.7 global_read_sum=68991279 global_valid_pg_cnt=2485763 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=144/512(28%) slc_full=175(34%) slc_victim=191(37%) thres(mig/soft/hard)=154/103/52
+[20758.795343] NVMeVirt: Write Stats: SLC writes=2740000, QLC writes=0, Migrations=1834291
+[20767.337112] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=17883 backlog_blocked=17883 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=27.7 global_read_sum=69089720 global_valid_pg_cnt=2493977 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=138/512(26%) slc_full=175(34%) slc_victim=197(38%) thres(mig/soft/hard)=154/103/52
+[20784.776035] NVMeVirt: Write Stats: SLC writes=2750000, QLC writes=0, Migrations=1834291
+[20800.363008] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=14041 backlog_blocked=14041 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=27.6 global_read_sum=69233773 global_valid_pg_cnt=2500883 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=133/512(25%) slc_full=175(34%) slc_victim=202(39%) thres(mig/soft/hard)=154/103/52
+[20815.395456] NVMeVirt: Write Stats: SLC writes=2760000, QLC writes=0, Migrations=1834291
+[20833.097484] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=16360 backlog_blocked=16360 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=27.6 global_read_sum=69331776 global_valid_pg_cnt=2508406 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=127/512(24%) slc_full=175(34%) slc_victim=208(40%) thres(mig/soft/hard)=154/103/52
+[20844.948216] NVMeVirt: Write Stats: SLC writes=2770000, QLC writes=0, Migrations=1834291
+[20863.514870] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=17283 backlog_blocked=17283 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=27.5 global_read_sum=69430420 global_valid_pg_cnt=2516563 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=121/512(23%) slc_full=175(34%) slc_victim=214(41%) thres(mig/soft/hard)=154/103/52
+[20869.185755] NVMeVirt: Write Stats: SLC writes=2780000, QLC writes=0, Migrations=1834291
+[20893.515179] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=10739 backlog_blocked=10739 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=27.5 global_read_sum=69549665 global_valid_pg_cnt=2521534 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=117/512(22%) slc_full=175(34%) slc_victim=218(42%) thres(mig/soft/hard)=154/103/52
+[20901.038473] NVMeVirt: Write Stats: SLC writes=2790000, QLC writes=0, Migrations=1834291
+[20923.515635] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=12729 backlog_blocked=12729 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=27.5 global_read_sum=69670110 global_valid_pg_cnt=2527523 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=112/512(21%) slc_full=175(34%) slc_victim=223(43%) thres(mig/soft/hard)=154/103/52
+[20955.125538] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=14468 backlog_blocked=14468 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=27.5 global_read_sum=69837368 global_valid_pg_cnt=2534483 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=107/512(20%) slc_full=175(34%) slc_victim=228(44%) thres(mig/soft/hard)=154/103/52
+[20985.816179] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=13543 backlog_blocked=13543 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=27.5 global_read_sum=69981019 global_valid_pg_cnt=2540883 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=102/512(19%) slc_full=175(34%) slc_victim=233(45%) thres(mig/soft/hard)=154/103/52
+[21017.093695] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=8594 backlog_blocked=8594 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=27.5 global_read_sum=70123070 global_valid_pg_cnt=2544963 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=99/512(19%) slc_full=175(34%) slc_victim=236(46%) thres(mig/soft/hard)=154/103/52
+[21047.093815] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=17685 backlog_blocked=17685 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=27.4 global_read_sum=70198306 global_valid_pg_cnt=2553043 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=93/512(18%) slc_full=175(34%) slc_victim=242(47%) thres(mig/soft/hard)=154/103/52
+[21079.792370] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=11849 backlog_blocked=11849 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=27.4 global_read_sum=70341560 global_valid_pg_cnt=2558883 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=88/512(17%) slc_full=175(34%) slc_victim=247(48%) thres(mig/soft/hard)=154/103/52
+[21109.888810] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=14719 backlog_blocked=14719 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=27.4 global_read_sum=70439202 global_valid_pg_cnt=2565843 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=83/512(16%) slc_full=175(34%) slc_victim=252(49%) thres(mig/soft/hard)=154/103/52
+[21142.216273] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=14660 backlog_blocked=14660 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=27.4 global_read_sum=70560051 global_valid_pg_cnt=2572803 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=78/512(15%) slc_full=175(34%) slc_victim=257(50%) thres(mig/soft/hard)=154/103/52
+[21172.259179] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=12181 backlog_blocked=12181 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=27.4 global_read_sum=70680095 global_valid_pg_cnt=2578563 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=74/512(14%) slc_full=175(34%) slc_victim=261(50%) thres(mig/soft/hard)=154/103/52
+[21202.970433] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=11117 backlog_blocked=11117 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=27.4 global_read_sum=70799739 global_valid_pg_cnt=2583843 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=70/512(13%) slc_full=175(34%) slc_victim=265(51%) thres(mig/soft/hard)=154/103/52
+[21221.912861] NVMeVirt: Write Stats: SLC writes=2890000, QLC writes=0, Migrations=1834291
+[21236.038514] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=19631 backlog_blocked=19631 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=27.3 global_read_sum=70898982 global_valid_pg_cnt=2593123 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=63/512(12%) slc_full=175(34%) slc_victim=272(53%) thres(mig/soft/hard)=154/103/52
+[21269.303231] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=14731 backlog_blocked=14731 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=27.3 global_read_sum=71043034 global_valid_pg_cnt=2600083 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=57/512(11%) slc_full=175(34%) slc_victim=278(54%) thres(mig/soft/hard)=154/103/52
+[21299.303772] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=14128 backlog_blocked=14070 cooldown_blocked=0 sb_scan_visits=172 valid_pages_sampled=233203 migrated=71910 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=27.2 global_read_sum=71140277 global_valid_pg_cnt=2606607 valid_seen=190705 skip_hot=118763 skip_recent=0 skip_not_slc=0 skip_queued=4 skip_active=0 skip_empty=0 move_fail=32 gc_sb=56 gc_invalid=112744 gc_valid=1944 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=107/512(20%) slc_full=175(34%) slc_victim=228(44%) thres(mig/soft/hard)=154/103/52
+[21330.366572] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=13804 backlog_blocked=13804 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=27.2 global_read_sum=71261123 global_valid_pg_cnt=2613359 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=102/512(19%) slc_full=175(34%) slc_victim=233(45%) thres(mig/soft/hard)=154/103/52
+[21361.768063] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=11130 backlog_blocked=11130 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=27.2 global_read_sum=71403972 global_valid_pg_cnt=2618639 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=98/512(19%) slc_full=175(34%) slc_victim=237(46%) thres(mig/soft/hard)=154/103/52
+[21392.634111] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=11033 backlog_blocked=11033 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=27.2 global_read_sum=71523619 global_valid_pg_cnt=2623839 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=94/512(18%) slc_full=175(34%) slc_victim=241(47%) thres(mig/soft/hard)=154/103/52
+[21422.633652] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=12200 backlog_blocked=12200 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=27.2 global_read_sum=71643417 global_valid_pg_cnt=2629232 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=90/512(17%) slc_full=175(34%) slc_victim=245(47%) thres(mig/soft/hard)=154/103/52
+[21454.412491] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=13939 backlog_blocked=13939 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=27.2 global_read_sum=71764259 global_valid_pg_cnt=2635999 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=85/512(16%) slc_full=175(34%) slc_victim=250(48%) thres(mig/soft/hard)=154/103/52
+[21486.819370] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=15883 backlog_blocked=15883 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=27.1 global_read_sum=71862297 global_valid_pg_cnt=2643519 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=79/512(15%) slc_full=175(34%) slc_victim=256(50%) thres(mig/soft/hard)=154/103/52
+[21516.819159] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=15922 backlog_blocked=15922 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=27.1 global_read_sum=71959933 global_valid_pg_cnt=2651025 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=73/512(14%) slc_full=175(34%) slc_victim=262(51%) thres(mig/soft/hard)=154/103/52
+[21525.682270] NVMeVirt: Write Stats: SLC writes=2990000, QLC writes=0, Migrations=1906219
+[21546.667558] NVMeVirt: Write Stats: SLC writes=3000000, QLC writes=0, Migrations=1906219
+[21546.820072] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=16298 backlog_blocked=16298 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=27.1 global_read_sum=72081576 global_valid_pg_cnt=2658639 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=68/512(13%) slc_full=175(34%) slc_victim=267(52%) thres(mig/soft/hard)=154/103/52
+[21565.614436] NVMeVirt: Write Stats: SLC writes=3010000, QLC writes=0, Migrations=1906219
+[21576.820337] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=19655 backlog_blocked=19655 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=27.0 global_read_sum=72180813 global_valid_pg_cnt=2667919 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=61/512(11%) slc_full=175(34%) slc_victim=274(53%) thres(mig/soft/hard)=154/103/52
+[21595.290799] NVMeVirt: Write Stats: SLC writes=3020000, QLC writes=0, Migrations=1906219
+[21609.639566] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=14469 backlog_blocked=14469 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=27.0 global_read_sum=72301657 global_valid_pg_cnt=2674879 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=55/512(10%) slc_full=175(34%) slc_victim=280(54%) thres(mig/soft/hard)=154/103/52
+[21630.191218] NVMeVirt: SLOW_PATH: nvmev_proc_io_sq took 1447965678 ns! Processed 10 reqs. Avg: 144796567 ns/req
+[21647.708704] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=8172 backlog_blocked=8064 cooldown_blocked=0 sb_scan_visits=403 valid_pages_sampled=578559 migrated=136911 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=27.0 global_read_sum=72468945 global_valid_pg_cnt=2682376 valid_seen=474969 skip_hot=337992 skip_recent=0 skip_not_slc=0 skip_queued=22 skip_active=0 skip_empty=0 move_fail=66 gc_sb=107 gc_invalid=212362 gc_valid=6774 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=153/512(29%) slc_full=177(34%) slc_victim=180(35%) thres(mig/soft/hard)=154/103/52
+[21647.709980] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=8173 backlog_blocked=8064 cooldown_blocked=0 sb_scan_visits=406 valid_pages_sampled=583975 migrated=138317 victim_q=27 victim_cap=26 heat_epoch=10 cold_thresh=27.0 global_read_sum=72468945 global_valid_pg_cnt=2682377 valid_seen=480385 skip_hot=342002 skip_recent=0 skip_not_slc=0 skip_queued=22 skip_active=0 skip_empty=0 move_fail=66 gc_sb=107 gc_invalid=212362 gc_valid=6774 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=153/512(29%) slc_full=177(34%) slc_victim=180(35%) thres(mig/soft/hard)=154/103/52
+[21689.501183] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=10 backlog_blocked=1 cooldown_blocked=0 sb_scan_visits=46 valid_pages_sampled=72869 migrated=6919 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=26.9 global_read_sum=72685021 global_valid_pg_cnt=2692966 valid_seen=62220 skip_hot=55296 skip_recent=0 skip_not_slc=0 skip_queued=3 skip_active=0 skip_empty=0 move_fail=5 gc_sb=8 gc_invalid=11417 gc_valid=4967 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=153/512(29%) slc_full=179(34%) slc_victim=178(34%) thres(mig/soft/hard)=154/103/52
+[21689.501926] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=11 backlog_blocked=1 cooldown_blocked=0 sb_scan_visits=47 valid_pages_sampled=74148 migrated=8198 victim_q=27 victim_cap=26 heat_epoch=10 cold_thresh=26.9 global_read_sum=72685021 global_valid_pg_cnt=2692966 valid_seen=63499 skip_hot=55296 skip_recent=0 skip_not_slc=0 skip_queued=3 skip_active=0 skip_empty=0 move_fail=5 gc_sb=8 gc_invalid=11417 gc_valid=4967 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=153/512(29%) slc_full=179(34%) slc_victim=178(34%) thres(mig/soft/hard)=154/103/52
+[21725.870823] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=11 backlog_blocked=1 cooldown_blocked=0 sb_scan_visits=41 valid_pages_sampled=55114 migrated=6790 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=26.9 global_read_sum=72885251 global_valid_pg_cnt=2702107 valid_seen=44625 skip_hot=37830 skip_recent=0 skip_not_slc=0 skip_queued=6 skip_active=0 skip_empty=0 move_fail=5 gc_sb=9 gc_invalid=12045 gc_valid=6387 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=153/512(29%) slc_full=183(35%) slc_victim=174(33%) thres(mig/soft/hard)=154/103/52
+[21725.871200] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=12 backlog_blocked=1 cooldown_blocked=0 sb_scan_visits=43 valid_pages_sampled=56520 migrated=8196 victim_q=27 victim_cap=26 heat_epoch=10 cold_thresh=26.9 global_read_sum=72885251 global_valid_pg_cnt=2702107 valid_seen=46031 skip_hot=37830 skip_recent=0 skip_not_slc=0 skip_queued=7 skip_active=0 skip_empty=0 move_fail=5 gc_sb=9 gc_invalid=12045 gc_valid=6387 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=153/512(29%) slc_full=183(35%) slc_victim=174(33%) thres(mig/soft/hard)=154/103/52
+[21762.705536] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=7 backlog_blocked=2 cooldown_blocked=0 sb_scan_visits=10 valid_pages_sampled=12566 migrated=3912 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=26.9 global_read_sum=73074147 global_valid_pg_cnt=2708806 valid_seen=10056 skip_hot=6144 skip_recent=0 skip_not_slc=0 skip_queued=1 skip_active=0 skip_empty=0 move_fail=0 gc_sb=4 gc_invalid=5682 gc_valid=2510 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=153/512(29%) slc_full=184(35%) slc_victim=173(33%) thres(mig/soft/hard)=154/103/52
+[21802.870938] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=16 backlog_blocked=5 cooldown_blocked=0 sb_scan_visits=18 valid_pages_sampled=19956 migrated=9126 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=26.9 global_read_sum=73289993 global_valid_pg_cnt=2720584 valid_seen=13225 skip_hot=4096 skip_recent=0 skip_not_slc=0 skip_queued=2 skip_active=0 skip_empty=0 move_fail=3 gc_sb=11 gc_invalid=17152 gc_valid=5376 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=153/512(29%) slc_full=186(36%) slc_victim=171(33%) thres(mig/soft/hard)=154/103/52
+[21802.871324] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=17 backlog_blocked=5 cooldown_blocked=0 sb_scan_visits=20 valid_pages_sampled=22602 migrated=10531 victim_q=27 victim_cap=26 heat_epoch=10 cold_thresh=26.9 global_read_sum=73289993 global_valid_pg_cnt=2720584 valid_seen=14631 skip_hot=4096 skip_recent=0 skip_not_slc=0 skip_queued=2 skip_active=0 skip_empty=0 move_fail=4 gc_sb=11 gc_invalid=17152 gc_valid=5376 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=153/512(29%) slc_full=186(36%) slc_victim=171(33%) thres(mig/soft/hard)=154/103/52
+[21809.464056] NVMeVirt: Write Stats: SLC writes=3120000, QLC writes=0, Migrations=2086488
+[21811.917379] NVMeVirt: Write Stats: SLC writes=3130000, QLC writes=0, Migrations=2094435
+[21814.659348] NVMeVirt: Write Stats: SLC writes=3140000, QLC writes=0, Migrations=2098426
+[21827.453075] NVMeVirt: Write Stats: SLC writes=3150000, QLC writes=0, Migrations=2098426
+[21832.871676] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=20064 backlog_blocked=20037 cooldown_blocked=0 sb_scan_visits=48 valid_pages_sampled=61583 migrated=22253 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=26.5 global_read_sum=73307776 global_valid_pg_cnt=2757652 valid_seen=40046 skip_hot=17788 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=5 gc_sb=26 gc_invalid=41190 gc_valid=12058 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=147/512(28%) slc_full=191(37%) slc_victim=172(33%) thres(mig/soft/hard)=154/103/52
+[21862.913928] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=31786 backlog_blocked=31786 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=26.4 global_read_sum=73318202 global_valid_pg_cnt=2772692 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=136/512(26%) slc_full=191(37%) slc_victim=183(35%) thres(mig/soft/hard)=154/103/52
+[21892.965237] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=32563 backlog_blocked=32563 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=26.3 global_read_sum=73328788 global_valid_pg_cnt=2787812 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=124/512(24%) slc_full=191(37%) slc_victim=195(38%) thres(mig/soft/hard)=154/103/52
+[21922.965854] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=31482 backlog_blocked=31482 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=26.1 global_read_sum=73338813 global_valid_pg_cnt=2802530 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=113/512(22%) slc_full=191(37%) slc_victim=206(40%) thres(mig/soft/hard)=154/103/52
+[21952.965885] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=31972 backlog_blocked=31972 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=26.0 global_read_sum=73349239 global_valid_pg_cnt=2817558 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=102/512(19%) slc_full=191(37%) slc_victim=217(42%) thres(mig/soft/hard)=154/103/52
+[21982.965983] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=31729 backlog_blocked=31729 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=25.8 global_read_sum=73359825 global_valid_pg_cnt=2832452 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=90/512(17%) slc_full=191(37%) slc_victim=229(44%) thres(mig/soft/hard)=154/103/52
+[21994.481394] NVMeVirt: Write Stats: SLC writes=3280000, QLC writes=0, Migrations=2098426
+[22007.264442] NVMeVirt: Write Stats: SLC writes=3290000, QLC writes=0, Migrations=2098426
+[22013.021829] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=31280 backlog_blocked=31280 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=25.7 global_read_sum=73370251 global_valid_pg_cnt=2847492 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=79/512(15%) slc_full=191(37%) slc_victim=240(46%) thres(mig/soft/hard)=154/103/52
+[22020.369596] NVMeVirt: Write Stats: SLC writes=3300000, QLC writes=0, Migrations=2098426
+[22033.365279] NVMeVirt: Write Stats: SLC writes=3310000, QLC writes=0, Migrations=2098426
+[22043.071898] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=31929 backlog_blocked=31929 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=25.6 global_read_sum=73380677 global_valid_pg_cnt=2862612 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=67/512(13%) slc_full=191(37%) slc_victim=252(49%) thres(mig/soft/hard)=154/103/52
+[22058.959879] NVMeVirt: Write Stats: SLC writes=3330000, QLC writes=0, Migrations=2098426
+[22073.072914] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=31998 backlog_blocked=31998 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=25.5 global_read_sum=73390862 global_valid_pg_cnt=2877361 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=56/512(10%) slc_full=191(37%) slc_victim=263(51%) thres(mig/soft/hard)=154/103/52
+[22103.073916] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=30318 backlog_blocked=30213 cooldown_blocked=0 sb_scan_visits=329 valid_pages_sampled=430927 migrated=144924 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=25.3 global_read_sum=73400439 global_valid_pg_cnt=2891677 valid_seen=346006 skip_hot=201000 skip_recent=0 skip_not_slc=0 skip_queued=12 skip_active=0 skip_empty=0 move_fail=82 gc_sb=105 gc_invalid=211734 gc_valid=3306 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=148/512(28%) slc_full=179(34%) slc_victim=183(35%) thres(mig/soft/hard)=154/103/52
+[22133.153209] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=31684 backlog_blocked=31684 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=25.2 global_read_sum=73411025 global_valid_pg_cnt=2906668 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=137/512(26%) slc_full=179(34%) slc_victim=194(37%) thres(mig/soft/hard)=154/103/52
+[22163.153787] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=31455 backlog_blocked=31455 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=25.1 global_read_sum=73421210 global_valid_pg_cnt=2921148 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=126/512(24%) slc_full=179(34%) slc_victim=205(40%) thres(mig/soft/hard)=154/103/52
+[22193.153942] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=31842 backlog_blocked=31842 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=25.0 global_read_sum=73431395 global_valid_pg_cnt=2936106 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=114/512(22%) slc_full=179(34%) slc_victim=217(42%) thres(mig/soft/hard)=154/103/52
+[22223.154527] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=31734 backlog_blocked=31734 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=24.8 global_read_sum=73441981 global_valid_pg_cnt=2950748 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=103/512(20%) slc_full=179(34%) slc_victim=228(44%) thres(mig/soft/hard)=154/103/52
+[22240.592285] NVMeVirt: Write Stats: SLC writes=3470000, QLC writes=0, Migrations=2243369
+[22253.154991] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=32654 backlog_blocked=32654 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=24.7 global_read_sum=73452887 global_valid_pg_cnt=2965788 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=91/512(17%) slc_full=179(34%) slc_victim=240(46%) thres(mig/soft/hard)=154/103/52
+[22253.287591] NVMeVirt: Write Stats: SLC writes=3480000, QLC writes=0, Migrations=2243369
+[22283.155169] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=32542 backlog_blocked=32542 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=24.6 global_read_sum=73463311 global_valid_pg_cnt=2979708 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=80/512(15%) slc_full=179(34%) slc_victim=251(49%) thres(mig/soft/hard)=154/103/52
+[22313.155258] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=32583 backlog_blocked=32583 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=24.5 global_read_sum=73473737 global_valid_pg_cnt=2994969 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=68/512(13%) slc_full=179(34%) slc_victim=263(51%) thres(mig/soft/hard)=154/103/52
+[22329.726446] NVMeVirt: Write Stats: SLC writes=3540000, QLC writes=0, Migrations=2243369
+[22342.517677] NVMeVirt: Write Stats: SLC writes=3550000, QLC writes=0, Migrations=2243369
+[22343.155318] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=32529 backlog_blocked=32529 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=24.4 global_read_sum=73484163 global_valid_pg_cnt=3010425 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=57/512(11%) slc_full=179(34%) slc_victim=274(53%) thres(mig/soft/hard)=154/103/52
+[22355.164644] NVMeVirt: Write Stats: SLC writes=3560000, QLC writes=0, Migrations=2381825
+[22373.155963] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=21257 backlog_blocked=21127 cooldown_blocked=0 sb_scan_visits=496 valid_pages_sampled=707220 migrated=153632 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=24.1 global_read_sum=73509365 global_valid_pg_cnt=3043385 valid_seen=559279 skip_hot=405598 skip_recent=0 skip_not_slc=0 skip_queued=25 skip_active=0 skip_empty=0 move_fail=49 gc_sb=126 gc_invalid=242473 gc_valid=15575 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=150/512(29%) slc_full=181(35%) slc_victim=179(34%) thres(mig/soft/hard)=154/103/52
+[22403.156026] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=32525 backlog_blocked=32525 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=24.0 global_read_sum=73519951 global_valid_pg_cnt=3058433 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=139/512(27%) slc_full=181(35%) slc_victim=190(37%) thres(mig/soft/hard)=154/103/52
+[22433.157107] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=32295 backlog_blocked=32295 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=23.9 global_read_sum=73530778 global_valid_pg_cnt=3073596 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=127/512(24%) slc_full=181(35%) slc_victim=202(39%) thres(mig/soft/hard)=154/103/52
+[22463.157411] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=32723 backlog_blocked=32723 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=23.8 global_read_sum=73541204 global_valid_pg_cnt=3088716 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=116/512(22%) slc_full=181(35%) slc_victim=213(41%) thres(mig/soft/hard)=154/103/52
+[22470.891546] NVMeVirt: Write Stats: SLC writes=3680000, QLC writes=0, Migrations=2397571
+[22483.488568] NVMeVirt: Write Stats: SLC writes=3690000, QLC writes=0, Migrations=2397571
+[22493.157986] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=32645 backlog_blocked=32645 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=23.6 global_read_sum=73551630 global_valid_pg_cnt=3104242 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=104/512(20%) slc_full=181(35%) slc_victim=225(43%) thres(mig/soft/hard)=154/103/52
+[22521.596558] NVMeVirt: Write Stats: SLC writes=3720000, QLC writes=0, Migrations=2397571
+[22523.158636] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=32537 backlog_blocked=32537 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=23.5 global_read_sum=73562216 global_valid_pg_cnt=3119303 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=92/512(17%) slc_full=181(35%) slc_victim=237(46%) thres(mig/soft/hard)=154/103/52
+[22534.050535] NVMeVirt: Write Stats: SLC writes=3730000, QLC writes=0, Migrations=2397571
+[22553.159110] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=32654 backlog_blocked=32654 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=23.4 global_read_sum=73573043 global_valid_pg_cnt=3134476 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=81/512(15%) slc_full=181(35%) slc_victim=248(48%) thres(mig/soft/hard)=154/103/52
+[22583.159515] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=32429 backlog_blocked=32429 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=23.3 global_read_sum=73583470 global_valid_pg_cnt=3149596 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=69/512(13%) slc_full=181(35%) slc_victim=260(50%) thres(mig/soft/hard)=154/103/52
+[22613.160055] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=32631 backlog_blocked=32631 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=23.2 global_read_sum=73594056 global_valid_pg_cnt=3164711 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=58/512(11%) slc_full=181(35%) slc_victim=271(52%) thres(mig/soft/hard)=154/103/52
+[22643.160576] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=25341 backlog_blocked=25220 cooldown_blocked=0 sb_scan_visits=372 valid_pages_sampled=476676 migrated=150238 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=23.0 global_read_sum=73631322 global_valid_pg_cnt=3189710 valid_seen=388321 skip_hot=238032 skip_recent=0 skip_not_slc=0 skip_queued=18 skip_active=0 skip_empty=0 move_fail=51 gc_sb=121 gc_invalid=235626 gc_valid=12182 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=154/512(30%) slc_full=180(35%) slc_victim=176(34%) thres(mig/soft/hard)=154/103/52
+[22666.507561] NVMeVirt: Write Stats: SLC writes=3850000, QLC writes=0, Migrations=2547534
+[22673.160808] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=32498 backlog_blocked=32498 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=22.9 global_read_sum=73643525 global_valid_pg_cnt=3204799 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=142/512(27%) slc_full=180(35%) slc_victim=188(36%) thres(mig/soft/hard)=154/103/52
+[22679.247988] NVMeVirt: Write Stats: SLC writes=3860000, QLC writes=0, Migrations=2547534
+[22691.913361] NVMeVirt: Write Stats: SLC writes=3870000, QLC writes=0, Migrations=2547534
+[22703.162135] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=32518 backlog_blocked=32518 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=22.8 global_read_sum=73654352 global_valid_pg_cnt=3219871 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=130/512(25%) slc_full=180(35%) slc_victim=200(39%) thres(mig/soft/hard)=154/103/52
+[22704.489900] NVMeVirt: Write Stats: SLC writes=3880000, QLC writes=0, Migrations=2547534
+[22717.098878] NVMeVirt: Write Stats: SLC writes=3890000, QLC writes=0, Migrations=2547534
+[22729.600540] NVMeVirt: Write Stats: SLC writes=3900000, QLC writes=0, Migrations=2547534
+[22733.164036] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=32920 backlog_blocked=32920 cooldown_blocked=0 sb_scan_visits=0 valid_pages_sampled=0 migrated=0 victim_q=26 victim_cap=26 heat_epoch=10 cold_thresh=22.7 global_read_sum=73664938 global_valid_pg_cnt=3234991 valid_seen=0 skip_hot=0 skip_recent=0 skip_not_slc=0 skip_queued=0 skip_active=0 skip_empty=0 move_fail=0 gc_sb=0 gc_invalid=0 gc_valid=0 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=119/512(23%) slc_full=180(35%) slc_victim=211(41%) thres(mig/soft/hard)=154/103/52
+[22754.663706] NVMeVirt: Write Stats: SLC writes=3920000, QLC writes=0, Migrations=2547534
+[22757.598939] NVMeVirt: [TEST_PHASE] exit reads=12707145 overwrites=495933 bg_repromote=0 bg_qlc_rebalance=16388 read_bg_conflicts=430 read_overwrite_conflicts=0 read_die_conflicts=6815 read_die_wait_ns=398582510 phys_qlc_reads=5707221 tier_mismatch_reads=0 phys_qlc_read_pages=5707221 tier_mismatch_read_pages=0
+[22757.599977] NVMeVirt: [SB_STATS] exit slc_free=109/512 qlc_free=1455/1920 host_active=1/14 gc=1689 gc_eff=89 erase_ops=13512 erase_ns=0 qlc_fast=1115588 qlc_slow=1436307
+[latency_summary]
+== die_singlefile_pageflow_fileparallel_fullscan_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1 ==
+path: result/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.txt
+cold_full_read_s: 2720.486744
+init_events: config_total_rows=256000 summary_total_rows=256000 config_interleave_pages=209715 config_reads_per_event=512 summary_read_events=9 heat_epoch_advances=9
+workload: full-scan-concurrent+append-concurrent-5.0GiB
+init_drop_cache_each_read: None
+read_events: missing
+core: reads=12707145 slc_reads=8198826 qlc_reads=9757117 slc_to_qlc_pages=1392174 repromote_pages=0 internal_write_pages=1395194 iw/read=0.110 read_bg_conflicts=430 read_die_conflicts=6815 hard_no_victim=0
+kernel_tail: status=captured mode=time-default start_line=11325 end_line=11556 start_boot_s=12682.49 start_filter_s=12681.490000 time_slack_s=1 matches=209
+kernel_signals: no_free_entry=0 hung_task=0 slow_proc_io_sq=5 slow_chmodel=0 proc_queue_full=0 writeback_queue_full=0 write_buffer_alloc_failed=0 write_buffer_alloc_waiting=0 credit_scan_capped=0 credit_horizon_overflow=0
+outcome: preheat_unproven
+verdict: preheat_diag=missing, preheat_events=ok(events=9,heat_epoch_advances=9), read_prio_bypass=missing, internal_writes_per_read=0.110, repromote_pages_per_read=0.000, read_bg_conflict_rate=0.000, qlc_read_rate=0.768, background_write_pressure=moderate(iw/read=0.110,repromote/read=0.000), repromotion_bottleneck=none, recent_write_guard=skips(0,forced=0,window_cfg=256), slc_migration_monitor=active(samples=123,last_migrated=0,victim_q=26/26,heat_epoch=10), slc_victim_queue=full(victim_q=26,victim_cap=26), io_completion=ok, io_slow_path=warn(proc_io_sq=5,chmodel=0)
+

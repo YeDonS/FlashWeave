@@ -1,38 +1,101 @@
-# Dac25_ae
+# Hybrid SLC/QLC SSD Experiments
 
-NVMeVirt-based storage research code for hybrid SLC/QLC SSDs, file fragmentation, die placement, and latency evaluation. The repository contains multiple FTL variants, SQLite and fio workloads, Filebench configurations, and analysis tools.
+[中文说明](README.zh-CN.md) · [Code map](docs/CODE_MAP.md) · [Variants](docs/VARIANTS.md) · [Results](results/README.md) · [Linux runbook](docs/RUNBOOK.md)
 
-## Start here
+An NVMeVirt research implementation for studying how file layout, flash placement and background maintenance affect read performance in a hybrid SLC/QLC SSD model.
 
-| Need | Entry point |
-| --- | --- |
-| Hybrid storage overview and evaluation setup | [README_HYBRID_STORAGE.md](README_HYBRID_STORAGE.md) |
-| NVMeVirt extension, kernel requirements, and memory reservation | [nvmevirt_DA/README.md](nvmevirt_DA/README.md) |
-| Hybrid SSD model configuration | [nvmevirt_DA/HYBRID_SSD_CONFIG.md](nvmevirt_DA/HYBRID_SSD_CONFIG.md) |
-| Evaluation workflow | [evaluation/HYBRID_TEST_GUIDE.md](evaluation/HYBRID_TEST_GUIDE.md) |
-| Manual evaluation steps | [evaluation/QUICK_MANUAL_STEPS.md](evaluation/QUICK_MANUAL_STEPS.md) |
+The experiments cover three questions:
 
-## Repository map
+- **Die placement:** how fragmented file pages are mapped across dies, including die-affinity and chain aggregation variants.
+- **SLC/QLC placement:** how read heat guides migration, QLC hot/cold placement, read repromotion and rebalance.
+- **Maintenance scheduling:** how migration and garbage collection interact with foreground reads, using V1, V2 and V3 variants.
 
-| Area | Contents |
-| --- | --- |
-| Root `conv_ftl*.c`, `conv_ftl*.h`, `ssd*.c`, and `ssd*.h` | FTL and SSD timing variants used by the root experiment scripts |
-| [build_die.sh](build_die.sh) | Selects FTL variants and builds modules with die-contention timing; supported variant names are documented in the script |
-| [nvmevirt_DA/](nvmevirt_DA/) | NVMeVirt module sources, Makefile, configuration, and inherited documentation |
-| [evaluation/](evaluation/) | Hybrid-storage evaluation scripts and guides |
-| Root `sqlite_*` files | SQLite workloads and fragmentation/placement experiments |
-| Root `fio_*` files | fio workload configuration, experiment driver, validation, and summaries |
-| Root `fileserver_*` files | Filebench workload configurations and hot/cold access experiments |
-| [analyze_latency_run.py](analyze_latency_run.py) | Parses latency-variant logs and mechanism counters |
-| [test_analyze_latency_run.py](test_analyze_latency_run.py) | Tests for the latency-log parser |
-| [plot_table_die_transition.py](plot_table_die_transition.py) | Die-transition plotting helper |
+The repository includes kernel sources, SQLite/fio/Filebench workloads, mechanism counters and an archived result bundle. NVMeVirt stores emulated device data in reserved host DRAM and models flash timing. Results below describe that emulation environment.
 
-## Environment and usage
+## Repository organization
 
-The kernel module and device workloads require a Linux experiment machine, compatible kernel headers, and the toolchain and workload dependencies described in the linked guides. Review the selected SSD model, reserved-memory configuration, device paths, and the variant mapping in `build_die.sh` before running an experiment.
+| Category | Location | Purpose |
+| --- | --- | --- |
+| Module foundation | [nvmevirt_DA/](nvmevirt_DA/) | Complete module, Makefile, PCI/DMA support and inherited docs |
+| FTL / timing overlays | Root `conv_ftl*`, `ssd*`, `channel_model*`, `main.c`, `io.c`, `admin.c`, `nvmev.h` | Newer experiment variants; see [code map](docs/CODE_MAP.md) |
+| Workloads | Root `sqlite_*`, `fio_*`, `fileserver_*`; [evaluation/](evaluation/README.md) | Workload sources, runners and historical scripts |
+| Documentation | [docs/](docs/) | Architecture, variants and Linux setup |
+| Archived inputs | [results/raw/](results/raw/) | 4 fio JSON files, 4 counter snapshots and 29 SQLite logs |
+| Analysis outputs | [results/derived/](results/derived/), [results/figures/](results/figures/) | Recomputed tables, diagnostic inventory and figures |
+| Utilities | [tools/](tools/) | Verification, analysis, plotting and workspace assembly |
 
-Older guides contain example checkout names such as `fast24_ae` and `nvmevirt_DA`. Resolve those examples against the actual layout above. The root experiment variants and the module under `nvmevirt_DA/` have separate entry points; record which source and build configuration produced each result.
+The snapshot has a split layout: newer overlays are at the root, while the complete module and Makefile are under `nvmevirt_DA/`. Source paths are preserved. The workspace utility assembles adjacent module/workload directories and forwards the ablation flags to Kbuild.
 
-## Origin
+## Inspect results without a kernel build
 
-The module documentation identifies [NVMeVirt](https://github.com/snu-csl/nvmevirt) as the upstream codebase and describes die-placement changes. See [nvmevirt_DA/README.md](nvmevirt_DA/README.md) and [nvmevirt_DA/LICENSE](nvmevirt_DA/LICENSE) for the existing module attribution and license text.
+Python 3.9+ is sufficient for table reproduction and tests; no external packages are needed.
+
+```bash
+python3 tools/reproduce_results.py --check
+python3 test_analyze_latency_run.py
+python3 tools/test_artifact_tools.py
+```
+
+Regenerate tables and plots:
+
+```bash
+python3 tools/reproduce_results.py
+python3 -m venv .venv
+.venv/bin/pip install -r tools/requirements-results.txt
+.venv/bin/python tools/plot_results.py
+```
+
+These commands analyze archived files and do not operate on a block device.
+
+## Recorded fio observations
+
+Four archived `fio-3.16` runs use 4 KiB I/O, `libaio`, direct I/O, iodepth 32 and Zipf 0.75. Each completes **8 GiB initialization writes, 40 GiB interleaved prewarm reads, 5 GiB measured reads and 0.5 GiB measured writes**, with zero reported fio job errors. Read and write jobs use separate address regions.
+
+| Variant | Read IOPS | Read p99 (ms) | Read p99.9 (ms) | Read p99.99 (ms) |
+| --- | ---: | ---: | ---: | ---: |
+| V1 plain (`die_latency1_norp_sb`) | 16,704.518 | 7.307 | 170.918 | 1,019.216 |
+| V1 hot/cold (`die_latency1_qlc_all_norp_sb`) | 17,257.670 | 7.307 | 227.541 | 1,052.770 |
+| V2 hot/cold (`die_latency2_qlc_all_norp_sb`) | 19,863.005 | 6.390 | 132.645 | 616.563 |
+| V3 hot/cold (`die_latency3_qlc_all_norp_sb`) | 18,899.255 | 6.586 | 233.832 | 566.231 |
+
+![Recorded fio read completion latency](results/figures/fio_read_latency.svg)
+
+Source links and exact values: [tables](results/derived/SUMMARY.md), [CSV](results/derived/fio_summary.csv), [input manifest](results/manifest.json).
+
+This is one run per variant. Workload settings match, but there is no matched-seed protocol, module hash or complete machine manifest. V2/V3 read-priority control counters are zero in the available fio sidecars; these observations do not establish a scheduling mechanism benefit. Repromotion and QLC rebalance are disabled, including variants named `qlc_all_norp`.
+
+SQLite logs are retained as a diagnostic collection. They contain different operation types, missing latency summaries and incomplete prewarm evidence. Every run has a parser outcome; elapsed times are not promoted as validated speedups. See [provenance and limitations](results/README.md).
+
+## Prepare a Linux experiment workspace
+
+```bash
+python3 tools/prepare_workspace.py --output .workspaces/nvmevirt
+cd .workspaces/nvmevirt/nvmevirt_DA
+bash build_die.sh die_i_base die_i_all
+```
+
+The last command requires Linux, the compatible die-affinity kernel and matching headers. Workspace assembly is tested; a fresh kernel build and device benchmark have not been run as part of this archive import.
+
+Read the [Linux runbook](docs/RUNBOOK.md) before device setup. Historical scripts load/unload modules and may format a configured device. Update the staged `evaluation/commonvariables.sh` for the experiment machine; inherited device names are examples, not auto-detected targets.
+
+## Architecture
+
+```mermaid
+flowchart LR
+    W[SQLite / fio / Filebench] --> N[NVMe request path]
+    N --> F[Selected FTL variant]
+    F --> P[SLC / QLC placement]
+    F --> M[Migration and GC workers]
+    P --> T[Die / channel timing model]
+    M --> T
+    T --> C[Latency and mechanism counters]
+    C --> A[Verified archive analysis]
+```
+
+Select baseline, integrated ablations or latency variants using the [catalog](docs/VARIANTS.md). Check compiled flags, runtime settings and actual counters when interpreting a historical run.
+
+## Origin and license
+
+Derived from [NVMeVirt](https://github.com/snu-csl/nvmevirt). Existing die-affinity attribution and kernel requirements remain in [nvmevirt_DA/README.md](nvmevirt_DA/README.md). Module code retains its inherited [GPL-2.0 license](LICENSE); the bundled priority queue retains its [license](nvmevirt_DA/pqueue/LICENSE).
+
+`Dac25_ae` is the repository identifier. This README makes no claim of conference acceptance or artifact certification. Historical expected-performance examples have been replaced with traceable archived observations.

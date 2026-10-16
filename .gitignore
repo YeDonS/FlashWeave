@@ -1,0 +1,20 @@
+# Local build workspaces and generated workload output
+.workspaces/
+.venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+*.ko
+*.o
+*.cmd
+*.mod
+*.mod.c
+Module.symvers
+modules.order
+cscope.out
+tags
+/result/
+/device/
+/evaluation/result/
+/evaluation/device/
+# results/raw is a reviewed, deliberately versioned archive. Do not ignore it.
