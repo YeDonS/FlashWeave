@@ -481,7 +481,35 @@ read_requests 8
     assert analyze_latency_run.experiment_outcome(data) == "baseline(no_read_priority)"
 
 
+def test_appended_report_is_not_kernel_evidence() -> None:
+    data = parse_text(
+        """
+[sqlite_init] tag=sample cold_full_read=1.0s
+[kernel_tail_status] status=captured mode=time start_line=1 end_line=2 matches=0
+kernel_signals: no_free_entry=0 hung_task=0 slow_proc_io_sq=0
+outcome: invalid_io(bad(no_free_entry=0,hung_task=1))
+verdict: io_completion=bad(no_free_entry=0,hung_task=1)
+"""
+    )
+    assert data["kernel_signals"]["hung_task"] == 0
+    assert "io_completion=ok" in analyze_latency_run.verdict(data)
+
+
+def test_real_hung_task_survives_appended_zero_summary() -> None:
+    data = parse_text(
+        """
+[kernel_tail_status] status=captured mode=time start_line=1 end_line=2 matches=1
+[123.45] INFO: task sqlite_append:42 blocked for more than 120 seconds.
+kernel_signals: no_free_entry=0 hung_task=0
+"""
+    )
+    assert data["kernel_signals"]["hung_task"] == 1
+    assert any(note.startswith("io_completion=bad") for note in analyze_latency_run.verdict(data))
+
+
 def main() -> int:
+    test_appended_report_is_not_kernel_evidence()
+    test_real_hung_task_survives_appended_zero_summary()
     test_cold_read_bypass_takes_precedence()
     test_total_bypass_used_when_cold_read_missing()
     test_channel_bypass_counts_as_read_priority()

@@ -1,0 +1,601 @@
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=4)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[sqlite_init] config tables=80 total_rows=256000 logical_row_bytes=32768 est_row_pages=8 interleave_pages=209715 window_tables=80 window_pages_per_table=960 read_ops_per_event=512 strict_cold_per_select=1 direct_io=1 fast_init_profile=0 dummy_interleave=0 dummy_stripe_bytes=229376
+[sqlite_init] cold_read_config mode=full-scan-concurrent iters=1 read_repromotion=on ctrl_path=/proc/nvmev/read_repromotion
+[sqlite_init] test_phase_path=/sys/kernel/debug/nvmev/ftl0/test_phase cold_overwrite_pct=0
+[sqlite_init] cold_extra_append mode=off target_bytes=0 read_ratio=10.000 row_reads_per_batch=0 sleep_us=2000 read_sleep_every=8 write_sleep_every=8
+[sqlite_init] pageflow_mode=1 rrpad_die_count=8 window_tables=80 window_pages_per_table=960 window_passes_per_round=1 init_drop_cache_each_read=1 unit_pages=1(sqlite page)
+[sqlite_init] dio_main_db_open_ok=1 dio_main_db_open_fail=0
+[sqlite_init] read_event=1 completed tables=80 elapsed=128.783532s
+[sqlite_init] heat_epoch_advance phase=init-read-event paths=1 first=/sys/kernel/debug/nvmev/ftl0/heat_epoch
+[sqlite_init] read_event=2 completed tables=80 elapsed=238.144237s
+[sqlite_init] heat_epoch_advance phase=init-read-event paths=1 first=/sys/kernel/debug/nvmev/ftl0/heat_epoch
+[sqlite_init] read_event=3 completed tables=80 elapsed=351.931687s
+[sqlite_init] heat_epoch_advance phase=init-read-event paths=1 first=/sys/kernel/debug/nvmev/ftl0/heat_epoch
+[sqlite_init] read_event=4 completed tables=80 elapsed=475.462522s
+[sqlite_init] heat_epoch_advance phase=init-read-event paths=1 first=/sys/kernel/debug/nvmev/ftl0/heat_epoch
+[sqlite_init] read_event=5 completed tables=80 elapsed=656.474256s
+[sqlite_init] heat_epoch_advance phase=init-read-event paths=1 first=/sys/kernel/debug/nvmev/ftl0/heat_epoch
+[sqlite_init] read_event=6 completed tables=80 elapsed=833.181623s
+[sqlite_init] heat_epoch_advance phase=init-read-event paths=1 first=/sys/kernel/debug/nvmev/ftl0/heat_epoch
+[sqlite_init] read_event=7 completed tables=80 elapsed=1172.332861s
+[sqlite_init] heat_epoch_advance phase=init-read-event paths=1 first=/sys/kernel/debug/nvmev/ftl0/heat_epoch
+[sqlite_init] read_event=8 completed tables=80 elapsed=1268.740383s
+[sqlite_init] heat_epoch_advance phase=init-read-event paths=1 first=/sys/kernel/debug/nvmev/ftl0/heat_epoch
+[sqlite_init] read_event=9 completed tables=80 elapsed=1521.440825s
+[sqlite_init] heat_epoch_advance phase=init-read-event paths=1 first=/sys/kernel/debug/nvmev/ftl0/heat_epoch
+[sqlite_init] test_phase=on phase=cold-read-start paths=1 first=/sys/kernel/debug/nvmev/ftl0/test_phase
+[sqlite_cold_full_scan] table=0 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=0 thread=0 time=109.099656s rows=179200
+[sqlite_cold_full_scan] table=1 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=1 thread=0 time=54.501665s rows=89600
+[sqlite_cold_full_scan] table=2 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=2 thread=0 time=56.942892s rows=92800
+[sqlite_cold_full_scan] table=3 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=3 thread=0 time=26.333315s rows=41600
+[sqlite_cold_full_scan] table=4 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=4 thread=0 time=37.171922s rows=60800
+[sqlite_cold_full_scan] table=5 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=5 thread=0 time=28.123539s rows=38400
+[sqlite_cold_full_scan] table=6 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=6 thread=0 time=29.177332s rows=48000
+[sqlite_cold_full_scan] table=7 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=7 thread=0 time=36.637556s rows=60800
+[sqlite_cold_full_scan] table=8 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=8 thread=0 time=18.691385s rows=19200
+[sqlite_cold_full_scan] table=9 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=9 thread=0 time=23.341793s rows=32000
+[sqlite_cold_full_scan] table=10 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=10 thread=0 time=25.259238s rows=41600
+[sqlite_cold_full_scan] table=11 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=11 thread=0 time=18.287329s rows=19200
+[sqlite_cold_full_scan] table=12 thread=0 ids=[0,3200)
+[s[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+qlite_cold_full_scan] table=12 thread=0 time=17.483361s rows=16000
+[sqlite_cold_full_scan] table=13 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=13 thread=0 time=23.569136s rows=32000
+[sqlite_cold_full_scan] table=14 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=14 thread=0 time=18.794520s rows=19200
+[sqlite_cold_full_scan] table=15 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=15 thread=0 time=18.285026s rows=22400
+[sqlite_cold_full_scan] table=16 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=16 thread=0 time=17.348008s rows=16000
+[sqlite_cold_full_scan] table=17 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=17 thread=0 time=18.212348s rows=19200
+[sqlite_cold_full_scan] table=18 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=18 thread=0 time=18.365581s rows=22400
+[sqlite_cold_full_scan] table=19 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=19 thread=0 time=17.211500s rows=16000
+[sqlite_cold_full_scan] table=20 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=20 thread=0 time=18.324206s rows=22400
+[sqlite_cold_full_scan] table=21 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=21 thread=0 time=16.647132s rows=12800
+[sqlite_cold_full_scan] table=22 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=22 thread=0 time=18.306257s rows=19200
+[sqlite_cold_full_scan] table=23 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=23 thread=0 time=9.874952s rows=6400
+[sqlite_cold_full_scan] table=24 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=24 thread=0 time=17.052666s rows=16000
+[sqlite_cold_full_scan] table=25 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=25 thread=0 time=17.195388s rows=16000
+[sqlite_cold_full_scan] table=26 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=26 thread=0 time=13.751147s rows=9600
+[sqlite_cold_full_scan] table=27 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=27 thread=0 time=17.390167s rows=16000
+[sqlite_cold_full_scan] table=28 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=28 thread=0 time=16.074606s rows=12800
+[sqlite_cold_full_scan] table=29 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=29 thread=0 time=16.723614s rows=12800
+[sqlite_cold_full_scan] table=30 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=30 thread=0 time=16.963268s rows=16000
+[sqlite_cold_full_scan] table=31 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=31 thread=0 time=19.191344s rows=22400
+[sqlite_cold_full_scan] table=32 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=32 thread=0 time=16.977693s rows=16000
+[sqlite_cold_full_scan] table=33 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=33 thread=0 time=17.436736s rows=16000
+[sqlite_cold_full_scan] table=34 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=34 thread=0 time=13.562237s rows=9600
+[sqlite_cold_full_scan] table=35 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=35 thread=0 time=4.932423s rows=3200
+[sqlite_cold_full_scan] table=36 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=36 thread=0 time=15.421493s rows=12800
+[sqlite_cold_full_scan] table=37 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=37 thread=0 time=14.385070s rows=9600
+[sqlite_cold_full_scan] table=38 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=38 thread=0 time=15.246900s rows=12800
+[sqlite_cold_full_scan] table=39 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=39 thread=0 time=15.461668s rows=12800
+[sqlite_cold_full_scan] table=40 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=40 thread=0 time=23.740416s rows=32000
+[sqlite_cold_full_scan] table=41 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=41 thread=0 time=13.934243s rows=9600
+[sqlite_cold_full_scan] table=42 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=42 thread=0 time=15.675568s rows=12800
+[sqlite_cold_full_scan] table=43 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=43 thread=0 time=10.151805s rows=6400
+[sqlite_cold_full_scan] table=44 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=44 thread=0 time=13.702969s rows=9600
+[sqlite_cold_full_scan] table=45 thread=0 ids=[0,3200)
+[sqlite_cold_ful[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+l_scan] table=45 thread=0 time=15.265340s rows=12800
+[sqlite_cold_full_scan] table=46 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=46 thread=0 time=15.612379s rows=12800
+[sqlite_cold_full_scan] table=47 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=47 thread=0 time=5.008417s rows=3200
+[sqlite_cold_full_scan] table=48 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=48 thread=0 time=15.381587s rows=12800
+[sqlite_cold_full_scan] table=49 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=49 thread=0 time=15.564021s rows=12800
+[sqlite_cold_full_scan] table=50 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=50 thread=0 time=17.636425s rows=16000
+[sqlite_cold_full_scan] table=51 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=51 thread=0 time=9.980764s rows=6400
+[sqlite_cold_full_scan] table=52 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=52 thread=0 time=17.196380s rows=16000
+[sqlite_cold_full_scan] table=53 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=53 thread=0 time=19.137214s rows=19200
+[sqlite_cold_full_scan] table=54 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=54 thread=0 time=9.731433s rows=6400
+[sqlite_cold_full_scan] table=55 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=55 thread=0 time=15.560171s rows=12800
+[sqlite_cold_full_scan] table=56 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=56 thread=0 time=16.774889s rows=16000
+[sqlite_cold_full_scan] table=57 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=57 thread=0 time=15.185552s rows=12800
+[sqlite_cold_full_scan] table=58 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=58 thread=0 time=13.745118s rows=9600
+[sqlite_cold_full_scan] table=59 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=59 thread=0 time=15.379255s rows=12800
+[sqlite_cold_full_scan] table=60 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=60 thread=0 time=14.987303s rows=12800
+[sqlite_cold_full_scan] table=61 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=61 thread=0 time=14.684787s rows=12800
+[sqlite_cold_full_scan] table=62 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=62 thread=0 time=13.991856s rows=9600
+[sqlite_cold_full_scan] table=63 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=63 thread=0 time=16.369110s rows=16000
+[sqlite_cold_full_scan] table=64 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=64 thread=0 time=21.094064s rows=25600
+[sqlite_cold_full_scan] table=65 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=65 thread=0 time=15.105216s rows=12800
+[sqlite_cold_full_scan] table=66 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=66 thread=0 time=14.664158s rows=12800
+[sqlite_cold_full_scan] table=67 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=67 thread=0 time=13.957804s rows=9600
+[sqlite_cold_full_scan] table=68 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=68 thread=0 time=14.970680s rows=12800
+[sqlite_cold_full_scan] table=69 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=69 thread=0 time=4.920698s rows=3200
+[sqlite_cold_full_scan] table=70 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=70 thread=0 time=9.688756s rows=6400
+[sqlite_cold_full_scan] table=71 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=71 thread=0 time=13.519250s rows=9600
+[sqlite_cold_full_scan] table=72 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=72 thread=0 time=14.599951s rows=12800
+[sqlite_cold_full_scan] table=73 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=73 thread=0 time=13.393856s rows=9600
+[sqlite_cold_full_scan] table=74 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=74 thread=0 time=9.624834s rows=6400
+[sqlite_cold_full_scan] table=75 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=75 thread=0 time=13.425283s rows=9600
+[sqlite_cold_full_scan] table=76 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=76 thread=0 time=13.575093s rows=9600
+[sqlite_cold_full_scan] table=77 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=77 thread=0 time=14.677124s rows=12800
+[sqlite_cold_full_scan] table=78 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=78 thread[dio] O_DIRECT enabled for /home/femu/fast24_ae/evaluation/./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db (fd=7)
+[table_tier] partition offset 1048576 bytes (256 FTL pages) applied to FIEMAP extents
+=0 time=9.567484s rows=6400
+[sqlite_cold_full_scan] table=79 thread=0 ids=[0,3200)
+[sqlite_cold_full_scan] table=79 thread=0 time=14.717455s rows=12800
+[sqlite_cold_full_scan] threads=1 total_rows=1638400 wall_time=1489.779700s throughput=34.37MB/s
+[sqlite_init] test_phase=off phase=cold-read-end paths=1 first=/sys/kernel/debug/nvmev/ftl0/test_phase
+[sqlite_init] row_stats=./result/sqlite_row_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.csv table_stats=./result/sqlite_table_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.csv
+[sqlite_init] table_tier=./result/sqlite_table_tier_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.csv page_tier_entries=2062068 page_die_entries=2062068 access_entries=16777216
+[sqlite_init] table_die=./result/sqlite_table_die_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.csv die_slots=8
+[sqlite_init] coldest_10pct_tables=8 avg_latency=2.257489s
+[sqlite_init] tag=die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1 tables=80 total_rows=256000 read_events=9 interleaved_read_time=6646.491925s cold_full_read=1489.779700s cold_full_read_tp=34.37MB/s cold_mode=full-scan-concurrent cold_iters=1 cold_read_repromotion=on db=./device/sqlite_dataset_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.db
+[sqlite_init] pageflow phase_pad_events=23 phase_pad_bytes=94208
+[sqlite_cold_table] table=tbl_00 rows=3200 time=109.103335s throughput=51.33MB/s
+[sqlite_cold_table] table=tbl_01 rows=3200 time=54.504206s throughput=51.37MB/s
+[sqlite_cold_table] table=tbl_02 rows=3200 time=56.944769s throughput=50.93MB/s
+[sqlite_cold_table] table=tbl_03 rows=3200 time=26.334812s throughput=49.36MB/s
+[sqlite_cold_table] table=tbl_04 rows=3200 time=37.173855s throughput=51.11MB/s
+[sqlite_cold_table] table=tbl_05 rows=3200 time=28.124758s throughput=42.67MB/s
+[sqlite_cold_table] table=tbl_06 rows=3200 time=29.178759s throughput=51.41MB/s
+[sqlite_cold_table] table=tbl_07 rows=3200 time=36.639418s throughput=51.86MB/s
+[sqlite_cold_table] table=tbl_08 rows=3200 time=18.692734s throughput=32.10MB/s
+[sqlite_cold_table] table=tbl_09 rows=3200 time=23.343254s throughput=42.84MB/s
+[sqlite_cold_table] table=tbl_10 rows=3200 time=25.260774s throughput=51.46MB/s
+[sqlite_cold_table] table=tbl_11 rows=3200 time=18.289267s throughput=32.81MB/s
+[sqlite_cold_table] table=tbl_12 rows=3200 time=17.484625s throughput=28.60MB/s
+[sqlite_cold_table] table=tbl_13 rows=3200 time=23.570347s throughput=42.43MB/s
+[sqlite_cold_table] table=tbl_14 rows=3200 time=18.795945s throughput=31.92MB/s
+[sqlite_cold_table] table=tbl_15 rows=3200 time=18.286925s throughput=38.28MB/s
+[sqlite_cold_table] table=tbl_16 rows=3200 time=17.349435s throughput=28.82MB/s
+[sqlite_cold_table] table=tbl_17 rows=3200 time=18.213674s throughput=32.94MB/s
+[sqlite_cold_table] table=tbl_18 rows=3200 time=18.366729s throughput=38.11MB/s
+[sqlite_cold_table] table=tbl_19 rows=3200 time=17.212611s throughput=29.05MB/s
+[sqlite_cold_table] table=tbl_20 rows=3200 time=18.326079s throughput=38.20MB/s
+[sqlite_cold_table] table=tbl_21 rows=3200 time=16.648444s throughput=24.03MB/s
+[sqlite_cold_table] table=tbl_22 rows=3200 time=18.307526s throughput=32.77MB/s
+[sqlite_cold_table] table=tbl_23 rows=3200 time=9.876501s throughput=20.25MB/s
+[sqlite_cold_table] table=tbl_24 rows=3200 time=17.053890s throughput=29.32MB/s
+[sqlite_cold_table] table=tbl_25 rows=3200 time=17.196725s throughput=29.08MB/s
+[sqlite_cold_table] table=tbl_26 rows=3200 time=13.753229s throughput=21.81MB/s
+[sqlite_cold_table] table=tbl_27 rows=3200 time=17.391350s throughput=28.75MB/s
+[sqlite_cold_table] table=tbl_28 rows=3200 time=16.075859s throughput=24.88MB/s
+[sqlite_cold_table] table=tbl_29 rows=3200 time=16.724914s throughput=23.92MB/s
+[sqlite_cold_table] table=tbl_30 rows=3200 time=16.964603s throughput=29.47MB/s
+[sqlite_cold_table] table=tbl_31 rows=3200 time=19.192798s throughput=36.47MB/s
+[sqlite_cold_table] table=tbl_32 rows=3200 time=16.979594s throughput=29.45MB/s
+[sqlite_cold_table] table=tbl_33 rows=3200 time=17.438021s throughput=28.67MB/s
+[sqlite_cold_table] table=tbl_34 rows=3200 time=13.563754s throughput=22.12MB/s
+[sqlite_cold_table] table=tbl_35 rows=3200 time=4.934334s throughput=20.27MB/s
+[sqlite_cold_table] table=tbl_36 rows=3200 time=15.422799s throughput=25.94MB/s
+[sqlite_cold_table] table=tbl_37 rows=3200 time=14.386442s throughput=20.85MB/s
+[sqlite_cold_table] table=tbl_38 rows=3200 time=15.248980s throughput=26.23MB/s
+[sqlite_cold_table] table=tbl_39 rows=3200 time=15.462906s throughput=25.87MB/s
+[sqlite_cold_table] table=tbl_40 rows=3200 time=23.741740s throughput=42.12MB/s
+[sqlite_cold_table] table=tbl_41 rows=3200 time=13.935340s throughput=21.53MB/s
+[sqlite_cold_table] table=tbl_42 rows=3200 time=15.676920s throughput=25.52MB/s
+[sqlite_cold_table] table=tbl_43 rows=3200 time=10.153844s throughput=19.70MB/s
+[sqlite_cold_table] table=tbl_44 rows=3200 time=13.704767s throughput=21.89MB/s
+[sqlite_cold_table] table=tbl_45 rows=3200 time=15.266686s throughput=26.20MB/s
+[sqlite_cold_table] table=tbl_46 rows=3200 time=15.613541s throughput=25.62MB/s
+[sqlite_cold_table] table=tbl_47 rows=3200 time=5.009725s throughput=19.96MB/s
+[sqlite_cold_table] table=tbl_48 rows=3200 time=15.382898s throughput=26.00MB/s
+[sqlite_cold_table] table=tbl_49 rows=3200 time=15.565291s throughput=25.70MB/s
+[sqlite_cold_table] table=tbl_50 rows=3200 time=17.637978s throughput=28.35MB/s
+[sqlite_cold_table] table=tbl_51 rows=3200 time=9.983101s throughput=20.03MB/s
+[sqlite_cold_table] table=tbl_52 rows=3200 time=17.197718s throughput=29.07MB/s
+[sqlite_cold_table] table=tbl_53 rows=3200 time=19.138855s throughput=31.35MB/s
+[sqlite_cold_table] table=tbl_54 rows=3200 time=9.732668s throughput=20.55MB/s
+[sqlite_cold_table] table=tbl_55 rows=3200 time=15.561482s throughput=25.70MB/s
+[sqlite_cold_table] table=tbl_56 rows=3200 time=16.776142s throughput=29.80MB/s
+[sqlite_cold_table] table=tbl_57 rows=3200 time=15.187501s throughput=26.34MB/s
+[sqlite_cold_table] table=tbl_58 rows=3200 time=13.746438s throughput=21.82MB/s
+[sqlite_cold_table] table=tbl_59 rows=3200 time=15.380507s throughput=26.01MB/s
+[sqlite_cold_table] table=tbl_60 rows=3200 time=14.988501s throughput=26.69MB/s
+[sqlite_cold_table] table=tbl_61 rows=3200 time=14.686558s throughput=27.24MB/s
+[sqlite_cold_table] table=tbl_62 rows=3200 time=13.993665s throughput=21.44MB/s
+[sqlite_cold_table] table=tbl_63 rows=3200 time=16.370951s throughput=30.54MB/s
+[sqlite_cold_table] table=tbl_64 rows=3200 time=21.095460s throughput=37.92MB/s
+[sqlite_cold_table] table=tbl_65 rows=3200 time=15.106456s throughput=26.48MB/s
+[sqlite_cold_table] table=tbl_66 rows=3200 time=14.665417s throughput=27.28MB/s
+[sqlite_cold_table] table=tbl_67 rows=3200 time=13.959083s throughput=21.49MB/s
+[sqlite_cold_table] table=tbl_68 rows=3200 time=14.972392s throughput=26.72MB/s
+[sqlite_cold_table] table=tbl_69 rows=3200 time=4.922763s throughput=20.31MB/s
+[sqlite_cold_table] table=tbl_70 rows=3200 time=9.690372s throughput=20.64MB/s
+[sqlite_cold_table] table=tbl_71 rows=3200 time=13.520757s throughput=22.19MB/s
+[sqlite_cold_table] table=tbl_72 rows=3200 time=14.601171s throughput=27.40MB/s
+[sqlite_cold_table] table=tbl_73 rows=3200 time=13.395089s throughput=22.40MB/s
+[sqlite_cold_table] table=tbl_74 rows=3200 time=9.626261s throughput=20.78MB/s
+[sqlite_cold_table] table=tbl_75 rows=3200 time=13.426502s throughput=22.34MB/s
+[sqlite_cold_table] table=tbl_76 rows=3200 time=13.576116s throughput=22.10MB/s
+[sqlite_cold_table] table=tbl_77 rows=3200 time=14.679166s throughput=27.25MB/s
+[sqlite_cold_table] table=tbl_78 rows=3200 time=9.569142s throughput=20.90MB/s
+[sqlite_cold_table] table=tbl_79 rows=3200 time=14.718790s throughput=27.18MB/s
+[sqlite_init] trace generated: ./device/sqlite_trace_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1_zipf.trace
+[sqlite_init] trace generated: ./device/sqlite_trace_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1_exp.trace
+[sqlite_init] trace generated: ./device/sqlite_trace_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1_normal.trace
+[sqlite_init] tag=die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1 rows=256000 approx_bytes=7.81 GiB heat=./result/sqlite_heat_die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.csv
+[die_affinity_stats]
+append_requests 1175
+append_effective 1155
+overwrite_requests 4933
+overwrite_effective 4827
+chains_allocated 0
+chain_block_migration_attempts 0
+chain_block_migration_pages 0
+chain_block_migration_skip_budget 0
+chain_chunk_migration_attempts 0
+chain_chunk_migration_pages 0
+chain_gc_to_qlc_pages 0
+[lpn_die_change_stats]
+tracked_lpns 2062356
+current_changed_lpns 1466310
+host_append_die_changed 21
+host_overwrite_die_changed 105
+gc_die_changed 208428
+slc_to_qlc_die_changed 1038442
+repromote_die_changed 219314
+qlc_rebalance_die_changed 0
+[test_phase_stats]
+active 0
+mechanism_source conv_ftl_latency3_superblock
+mechanism_scheduler v3_read_priority_worker
+slc_migration_core page_level_cold_filter
+compile_read_repromotion_enabled 1
+compile_die_batched_repromotion_enabled 0
+compile_qlc_rebalance_enabled 0
+compile_qlc_hotcold_enabled 0
+compile_test_phase_repromotion_enabled 1
+compile_test_phase_qlc_rebalance_enabled 1
+test_phase_repromote_policy enabled
+read_requests 11878880
+test_phase_recent_write_guard_config 1
+test_phase_recent_write_guard_active 0
+test_phase_guard_read_reqs_config 256
+test_phase_guard_read_reqs 11878880
+test_phase_guard_epoch 46402
+test_phase_recent_guard_skips 0
+test_phase_recent_guard_forced 0
+overwrite_requests 0
+bg_repromote_ops 3
+bg_qlc_rebalance_ops 0
+read_bg_conflicts 0
+read_priority_yields 197350
+read_priority_delayed_requeues 185751
+read_priority_forced_progress_runs 0
+read_overwrite_conflicts 0
+read_die_conflicts 0
+read_die_wait_ns 0
+host_read_nand_ops 15079358
+global_read_sum 76025414
+global_valid_pg_cnt 2062343
+mapped_pages 2062356
+mapped_phys_slc_pages 911615
+mapped_phys_qlc_pages 1150741
+mapped_flag_slc_pages 911615
+mapped_flag_qlc_pages 1150741
+mapped_tier_mismatch_pages 0
+mapped_qlc_fast_live_pages 575365
+mapped_qlc_slow_live_pages 575376
+host_read_slc_nand_ops 9953697
+host_read_qlc_nand_ops 5125661
+host_read_phys_slc_nand_ops 9953697
+host_read_phys_qlc_nand_ops 5125661
+host_read_tier_mismatch_nand_ops 0
+read_nand_bg_overlap_ops 0
+host_write_pages 74
+host_write_nand_ops 16
+write_early_completion_reqs 10
+slc_to_qlc_migration_pages 4496
+slc_gc_valid_copy_pages 6336
+slc_gc_invalid_reclaimed_pages 3904
+qlc_repromote_pages 5436
+internal_write_pages_est 10835
+internal_write_pages_per_host_write_x1000 146418
+slc_to_qlc_nand_reads 4496
+slc_to_qlc_nand_writes 4496
+repromote_nand_reads 3
+repromote_nand_writes 3
+active_reads 0
+active_overwrites 0
+active_bg_ops 0
+[test_phase_stats_aggregate]
+active 0
+compile_read_repromotion_enabled 1
+compile_die_batched_repromotion_enabled 0
+compile_qlc_rebalance_enabled 0
+compile_qlc_hotcold_enabled 0
+compile_test_phase_repromotion_enabled 1
+compile_test_phase_qlc_rebalance_enabled 1
+read_requests 11878880
+test_phase_recent_write_guard_config 1
+test_phase_recent_write_guard_active 0
+test_phase_guard_read_reqs_config 256
+test_phase_guard_read_reqs 11878880
+test_phase_guard_epoch 46402
+test_phase_recent_guard_skips 0
+test_phase_recent_guard_forced 0
+overwrite_requests 0
+bg_repromote_ops 3
+bg_qlc_rebalance_ops 0
+read_bg_conflicts 0
+read_priority_yields 197350
+read_priority_delayed_requeues 185751
+read_priority_forced_progress_runs 0
+read_overwrite_conflicts 0
+read_die_conflicts 0
+read_die_wait_ns 0
+host_read_nand_ops 15079358
+global_read_sum 76025414
+global_valid_pg_cnt 2062343
+mapped_pages 2062356
+mapped_phys_slc_pages 911615
+mapped_phys_qlc_pages 1150741
+mapped_flag_slc_pages 911615
+mapped_flag_qlc_pages 1150741
+mapped_tier_mismatch_pages 0
+mapped_qlc_fast_live_pages 575365
+mapped_qlc_slow_live_pages 575376
+host_read_slc_nand_ops 9953697
+host_read_qlc_nand_ops 5125661
+host_read_phys_slc_nand_ops 9953697
+host_read_phys_qlc_nand_ops 5125661
+host_read_tier_mismatch_nand_ops 0
+read_nand_bg_overlap_ops 0
+host_write_pages 74
+host_write_nand_ops 16
+write_early_completion_reqs 10
+slc_to_qlc_migration_pages 4496
+slc_gc_valid_copy_pages 6336
+slc_gc_invalid_reclaimed_pages 3904
+qlc_repromote_pages 5436
+internal_write_pages_est 10835
+internal_write_pages_per_host_write_x1000 146418
+slc_to_qlc_nand_reads 4496
+slc_to_qlc_nand_writes 4496
+repromote_nand_reads 3
+repromote_nand_writes 3
+active_reads 0
+active_overwrites 0
+active_bg_ops 0
+[superblock_stats]
+# baseline superblock_stats: point-in-time counters; *_pct is integer percent
+mechanism_source conv_ftl_latency3_superblock
+mechanism_scheduler v3_read_priority_worker
+slc_migration_core page_level_cold_filter
+compile_read_repromotion_enabled 1
+compile_die_batched_repromotion_enabled 0
+compile_qlc_rebalance_enabled 0
+compile_qlc_hotcold_enabled 0
+compile_test_phase_repromotion_enabled 1
+compile_test_phase_qlc_rebalance_enabled 1
+test_phase_repromote_policy enabled
+die_count 8
+slc_pages_per_superblock 2048
+qlc_pages_per_superblock 8192
+slc_pages_per_block 256
+qlc_pages_per_block 1024
+slc_host_active_superblocks 1
+active_valid_pages 1987
+slc_host_active_limit 14
+qlc_host_active_superblocks 1
+qlc_host_active_limit 14
+slc_total_lines 512
+slc_free_lines 64
+slc_victim_lines 55
+slc_full_lines 391
+slc_free_line_pct 12
+qlc_total_lines 1920
+qlc_free_lines 1724
+qlc_victim_lines 134
+qlc_full_lines 61
+qlc_free_line_pct 89
+qlc_fast_pages 575423
+qlc_slow_pages 575441
+qlc_fast_page_pct 49
+qlc_closed_repromote_scans 180050
+qlc_closed_repromote_pages 450915
+hard_no_victim_count 0
+active_sealed_for_hard 0
+active_sealed_for_alloc_fail 0
+victim_pq_insert_fail 0
+victim_pq_duplicate_avoided 449982
+victim_pq_corrupt_pos 0
+victim_pq_max_size 133
+active_seal_migrated_pages 0
+active_seal_no_migrate 0
+slc_sb_gc_count 963
+slc_sb_gc_valid_pages 379823
+slc_sb_gc_invalid_pages 1592401
+slc_sb_gc_reclaim_eff_pct 80
+slc_sb_gc_erase_ops 7704
+slc_sb_gc_erase_time_ns 0
+slc_sb_gc_avg_erase_time_ns 0
+test_phase_read_die_wait_ns 0
+heat_epoch 10
+migration_read_path_time_ns 0
+[die_stats]
+die0 reads=9479447 conflicts=10 wait_ns=813207
+die1 reads=9495846 conflicts=4 wait_ns=290749
+die2 reads=9513373 conflicts=0 wait_ns=0
+die3 reads=9507623 conflicts=2 wait_ns=57132
+die4 reads=9483431 conflicts=0 wait_ns=0
+die5 reads=9505770 conflicts=3 wait_ns=136601
+die6 reads=9521459 conflicts=3 wait_ns=161123
+die7 reads=9518893 conflicts=7 wait_ns=411194
+[bg_nand_stats]
+busy_ns=0 read_ns=0 write_ns=0 erase_ns=0 read_ops=0 write_ops=0 erase_ops=0 read_prio_bypass_ops=0 read_prio_bypass_ns=0 read_prio_ch_bypass_ops=0 read_prio_ch_bypass_ns=0 read_prio_pcie_bypass_ops=0 read_prio_pcie_bypass_ns=0 lp_host_write_ops=293447 lp_host_write_ns=64366833037
+[kernel_tail_status] status=captured mode=time-default start_line=922 end_line=11321 start_boot_s=856.93 start_filter_s=855.930000 time_slack_s=1 matches=15
+[kernel_tail]
+[ 4986.160362] NVMeVirt: heat_epoch advanced by 1 to 8
+[ 4989.160014] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=29 backlog_blocked=0 cooldown_blocked=0 sb_scan_visits=51 valid_pages_sampled=102156 migrated=56473 victim_q=26 victim_cap=26 heat_epoch=8 cold_thresh=22.8 global_read_sum=38271792 global_valid_pg_cnt=1674572 valid_seen=102156 skip_hot=45683 skip_recent=0 skip_not_slc=0 skip_queued=1 skip_active=0 skip_empty=0 move_fail=0 gc_sb=29 gc_invalid=56615 gc_valid=2777 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=115/512(22%) slc_full=344(67%) slc_victim=51(9%) thres(mig/soft/hard)=154/103/52
+[ 5007.494048] NVMeVirt: Write Stats: SLC writes=1760000, QLC writes=0, Migrations=1108530
+[ 5014.511477] NVMeVirt: Write Stats: SLC writes=1800000, QLC writes=0, Migrations=1108530
+[ 5026.294683] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=23 backlog_blocked=0 cooldown_blocked=0 sb_scan_visits=74 valid_pages_sampled=128698 migrated=41689 victim_q=26 victim_cap=26 heat_epoch=8 cold_thresh=20.7 global_read_sum=38272494 global_valid_pg_cnt=1844498 valid_seen=128698 skip_hot=87009 skip_recent=0 skip_not_slc=0 skip_queued=11 skip_active=0 skip_empty=0 move_fail=0 gc_sb=23 gc_invalid=41930 gc_valid=5174 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=52/512(10%) slc_full=409(79%) slc_victim=49(9%) thres(mig/soft/hard)=154/103/52
+[ 6302.694109] NVMeVirt: heat_epoch advanced by 1 to 9
+[ 6303.592496] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=47 backlog_blocked=0 cooldown_blocked=0 sb_scan_visits=122 valid_pages_sampled=236924 migrated=90912 victim_q=26 victim_cap=26 heat_epoch=9 cold_thresh=26.0 global_read_sum=49066713 global_valid_pg_cnt=1883842 valid_seen=236924 skip_hot=146012 skip_recent=0 skip_not_slc=0 skip_queued=6 skip_active=0 skip_empty=0 move_fail=0 gc_sb=47 gc_invalid=92567 gc_valid=3689 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=32/512(6%) slc_full=431(84%) slc_victim=47(9%) thres(mig/soft/hard)=154/103/52
+[ 6306.453364] NVMeVirt: SLOW_PATH: nvmev_proc_io_sq took 3027996448 ns! Processed 16 reqs. Avg: 189249778 ns/req
+[ 6333.825692] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=191 backlog_blocked=0 cooldown_blocked=0 sb_scan_visits=727 valid_pages_sampled=1355064 migrated=386303 victim_q=24 victim_cap=26 heat_epoch=9 cold_thresh=24.1 global_read_sum=49067595 global_valid_pg_cnt=2029989 valid_seen=1328164 skip_hot=794851 skip_recent=147010 skip_not_slc=0 skip_queued=18 skip_active=2 skip_empty=0 move_fail=0 gc_sb=237 gc_invalid=386974 gc_valid=98402 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=153/512(29%) slc_full=309(60%) slc_victim=48(9%) thres(mig/soft/hard)=154/103/52
+[ 7863.569000] NVMeVirt: heat_epoch advanced by 1 to 10
+[ 7863.569056] NVMeVirt: [TEST_PHASE] enter
+[ 7863.572048] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=4481 backlog_blocked=0 cooldown_blocked=3969 sb_scan_visits=32768 valid_pages_sampled=44934287 migrated=716 victim_q=22 victim_cap=26 heat_epoch=10 cold_thresh=29.5 global_read_sum=60946312 global_valid_pg_cnt=2062004 valid_seen=44770906 skip_hot=34392535 skip_recent=10377655 skip_not_slc=0 skip_queued=1407 skip_active=128 skip_empty=0 move_fail=0 gc_sb=4 gc_invalid=1468 gc_valid=6724 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=65/512(12%) slc_full=398(77%) slc_victim=47(9%) thres(mig/soft/hard)=154/103/52
+[ 7863.573395] NVMeVirt: [MIG-MONITOR] SLC->QLC SB migration: calls=4482 backlog_blocked=0 cooldown_blocked=3970 sb_scan_visits=32768 valid_pages_sampled=44934287 migrated=716 victim_q=22 victim_cap=26 heat_epoch=10 cold_thresh=29.5 global_read_sum=60946314 global_valid_pg_cnt=2062005 valid_seen=44770906 skip_hot=34392535 skip_recent=10377655 skip_not_slc=0 skip_queued=1407 skip_active=128 skip_empty=0 move_fail=0 gc_sb=4 gc_invalid=1468 gc_valid=6724 hard_no_victim_delta=0 active_sealed_hard_delta=0 active_sealed_alloc_delta=0 active_seal_migrated_delta=0 active_seal_no_migrate_delta=0 slc_free=65/512(12%) slc_full=398(77%) slc_victim=47(9%) thres(mig/soft/hard)=154/103/52
+[ 9354.770432] NVMeVirt: [TEST_PHASE] exit reads=11878880 overwrites=0 bg_repromote=3 bg_qlc_rebalance=0 read_bg_conflicts=0 read_overwrite_conflicts=0 read_die_conflicts=0 read_die_wait_ns=0 phys_qlc_reads=3496811 tier_mismatch_reads=0
+[ 9354.770998] NVMeVirt: [SB_STATS] exit slc_free=66/512 qlc_free=1724/1920 host_active=1/14 gc=963 gc_eff=80 erase_ops=7704 erase_ns=0 qlc_fast=578139 qlc_slow=578158
+[latency_summary]
+== die_singlefile_pageflow_fileparallel_fullscan_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1 ==
+path: result/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.txt
+cold_full_read_s: 1489.7797
+init_events: config_total_rows=256000 summary_total_rows=256000 config_interleave_pages=209715 config_reads_per_event=512 summary_read_events=9 heat_epoch_advances=9
+workload: full-scan-concurrent
+init_drop_cache_each_read: None
+read_events: missing
+core: reads=11878880 slc_reads=9953697 qlc_reads=5125661 slc_to_qlc_pages=4496 repromote_pages=5436 internal_write_pages=4499 iw/read=0.000 read_bg_conflicts=0 read_die_conflicts=0 hard_no_victim=0
+read_priority_ctrl: yields=197350 delayed_requeues=185751 forced_progress=0
+kernel_tail: status=captured mode=time-default start_line=922 end_line=11321 start_boot_s=856.93 start_filter_s=855.930000 time_slack_s=1 matches=15
+kernel_signals: no_free_entry=0 hung_task=0 slow_proc_io_sq=1 slow_chmodel=0 proc_queue_full=0 writeback_queue_full=0 write_buffer_alloc_failed=0 write_buffer_alloc_waiting=0 credit_scan_capped=0 credit_horizon_overflow=0
+outcome: yield_only(no_completion_priority,preheat_unproven)
+verdict: preheat_diag=missing, preheat_events=ok(events=9,heat_epoch_advances=9), read_prio_bypass=missing, internal_writes_per_read=0.000, repromote_pages_per_read=0.000, read_bg_conflict_rate=0.000, qlc_read_rate=0.431, background_write_pressure=moderate(iw/read=0.000,repromote/read=0.000), repromotion_bottleneck=present(pages/read=0.000), read_priority_runtime=yield_only(yields=197350,bypass_ops=0), read_priority_force_progress=not_observed(yields=197350,forced=0), recent_write_guard=skips(0,forced=0,window_cfg=256), slc_migration_monitor=active(samples=6,last_migrated=716,victim_q=22/26,heat_epoch=10), io_completion=ok, io_slow_path=warn(proc_io_sq=1,chmodel=0)
+

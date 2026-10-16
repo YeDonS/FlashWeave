@@ -1,0 +1,4 @@
+# Preserve archived bytes, including whitespace present in the original logs.
+results/raw/** linguist-generated=true -whitespace
+results/derived/** linguist-generated=true
+results/figures/** linguist-generated=true -whitespace

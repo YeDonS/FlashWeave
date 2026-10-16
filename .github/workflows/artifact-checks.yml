@@ -1,0 +1,27 @@
+name: Artifact checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  archive-and-parser:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.10', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Verify raw hashes and recompute tables
+        run: python tools/reproduce_results.py --check
+      - name: Test log parser
+        run: python test_analyze_latency_run.py
+      - name: Test evidence checks and workspace preparation
+        run: python tools/test_artifact_tools.py

@@ -1,0 +1,272 @@
+{
+  "schema_version": 1,
+  "dataset_id": "local-latency-archive-2026",
+  "imported_on": "2026-10-15",
+  "source_collection": "test p1 (local experiment archive)",
+  "source_code_commit": null,
+  "kernel_module_sha256": null,
+  "machine_manifest": null,
+  "random_seed_record": null,
+  "evidence_scope": "Archived NVMeVirt emulation runs, not new runs or physical flash measurements. Raw bytes copied without edits. SHA-256 verifies the imported files, not their historical origin.",
+  "files": [
+    {
+      "path": "results/raw/fio/fio_mixed_die_latency1_norp_sb_zipf_rw10_1.json",
+      "source_relative_path": "fio/fio_mixed_die_latency1_norp_sb_zipf_rw10_1.json",
+      "bytes": 640619,
+      "sha256": "b7bceb6bd3713cd772a72496762a9e429cdc1047c8b7b251641f8b44e1ada9b0",
+      "kind": "fio_json"
+    },
+    {
+      "path": "results/raw/fio/fio_mixed_die_latency1_qlc_all_norp_sb_zipf_rw10_1.json",
+      "source_relative_path": "fio/fio_mixed_die_latency1_qlc_all_norp_sb_zipf_rw10_1.json",
+      "bytes": 640766,
+      "sha256": "a8acd08531f568a08a05b4005bbe21946aec188a2af3fceeb3b04c285ba0c24f",
+      "kind": "fio_json"
+    },
+    {
+      "path": "results/raw/fio/fio_mixed_die_latency2_qlc_all_norp_sb_zipf_rw10_1.json",
+      "source_relative_path": "fio/fio_mixed_die_latency2_qlc_all_norp_sb_zipf_rw10_1.json",
+      "bytes": 640749,
+      "sha256": "56b4a61dd999a8d66e8baa9e7bd70572a6a54dcdb07d2f50bc92ba6f5859a036",
+      "kind": "fio_json"
+    },
+    {
+      "path": "results/raw/fio/fio_mixed_die_latency3_qlc_all_norp_sb_zipf_rw10_1.json",
+      "source_relative_path": "fio/fio_mixed_die_latency3_qlc_all_norp_sb_zipf_rw10_1.json",
+      "bytes": 640707,
+      "sha256": "65fc5836caba5200f97cc82bafaeee97264043613b169d23cf822017bbcb1cf0",
+      "kind": "fio_json"
+    },
+    {
+      "path": "results/raw/fio/fio_test_phase_stats_fio_mixed_die_latency1_norp_sb_zipf_rw10_1.txt",
+      "source_relative_path": "fio/fio_test_phase_stats_fio_mixed_die_latency1_norp_sb_zipf_rw10_1.txt",
+      "bytes": 1964,
+      "sha256": "27cfd4ae33a3349e656a5d7247d3b2088277c0d9d522fb28a9c191d4207cbb5d",
+      "kind": "fio_stats"
+    },
+    {
+      "path": "results/raw/fio/fio_test_phase_stats_fio_mixed_die_latency1_qlc_all_norp_sb_zipf_rw10_1.txt",
+      "source_relative_path": "fio/fio_test_phase_stats_fio_mixed_die_latency1_qlc_all_norp_sb_zipf_rw10_1.txt",
+      "bytes": 1965,
+      "sha256": "90e2c7db288a6071bb3c900a130cfa2bd3337b0e7ca12775f0200e6a4d8959c3",
+      "kind": "fio_stats"
+    },
+    {
+      "path": "results/raw/fio/fio_test_phase_stats_fio_mixed_die_latency2_qlc_all_norp_sb_zipf_rw10_1.txt",
+      "source_relative_path": "fio/fio_test_phase_stats_fio_mixed_die_latency2_qlc_all_norp_sb_zipf_rw10_1.txt",
+      "bytes": 2107,
+      "sha256": "3376a845cfe1ec19da9db9e44b56199cfbc7b06c227dbb3812bf4da563d1ee6d",
+      "kind": "fio_stats"
+    },
+    {
+      "path": "results/raw/fio/fio_test_phase_stats_fio_mixed_die_latency3_qlc_all_norp_sb_zipf_rw10_1.txt",
+      "source_relative_path": "fio/fio_test_phase_stats_fio_mixed_die_latency3_qlc_all_norp_sb_zipf_rw10_1.txt",
+      "bytes": 2065,
+      "sha256": "3d3d182cc220e3d913b7b2a60ddd82b9f217e302fe03f35d24649a7b1242ccb6",
+      "kind": "fio_stats"
+    },
+    {
+      "path": "results/raw/sqlite/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency1_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.txt",
+      "source_relative_path": "unfold/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency1_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.txt",
+      "bytes": 146055,
+      "sha256": "2411adfe70379832ba0a0469337142808f208d77a5fce2c9ac68361e1d717170",
+      "kind": "sqlite_log"
+    },
+    {
+      "path": "results/raw/sqlite/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.txt",
+      "source_relative_path": "unfold/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.txt",
+      "bytes": 134555,
+      "sha256": "d1ca2c4a7e7522b7634b9b3871d50f936d00d4f8e8e020d7ea7a423f892bb1ac",
+      "kind": "sqlite_log"
+    },
+    {
+      "path": "results/raw/sqlite/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency1_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.txt",
+      "source_relative_path": "unfold/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency1_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.txt",
+      "bytes": 260354,
+      "sha256": "c063d2d5d5aefb5f340dee158146c7aae9be302b1f1475c25017d7bb4d47248a",
+      "kind": "sqlite_log"
+    },
+    {
+      "path": "results/raw/sqlite/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency2_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.txt",
+      "source_relative_path": "unfold/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency2_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.txt",
+      "bytes": 117844,
+      "sha256": "4e2830a265967991f1dfe88916296e2f77da461d1e136345f26954652eaa67e4",
+      "kind": "sqlite_log"
+    },
+    {
+      "path": "results/raw/sqlite/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency3_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.txt",
+      "source_relative_path": "unfold/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency3_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.txt",
+      "bytes": 113855,
+      "sha256": "98d040d2f0ab270be1dcb2b8a9b487f88064eef21467e567e914ee11c8ccb14b",
+      "kind": "sqlite_log"
+    },
+    {
+      "path": "results/raw/sqlite/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.txt",
+      "source_relative_path": "unfold/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency3_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.txt",
+      "bytes": 50588,
+      "sha256": "b087880f1e5c6156ed73bd2adb9209cc12a078d2216d0022490d2f58508393b3",
+      "kind": "sqlite_log"
+    },
+    {
+      "path": "results/raw/sqlite/sqlite_die_tablefile_pageflow_fileparallel_fullscan_init_die_latency1_qlc_all_norp_sb_random_row_concurrent_zipf_wp960_cmt_8M_t1.txt",
+      "source_relative_path": "unfold/sqlite_die_tablefile_pageflow_fileparallel_fullscan_init_die_latency1_qlc_all_norp_sb_random_row_concurrent_zipf_wp960_cmt_8M_t1.txt",
+      "bytes": 76473,
+      "sha256": "86f3522f0adc0847fc0f45192cffa8cfaeac0f1f8fab873975a24c86905c4acb",
+      "kind": "sqlite_log"
+    },
+    {
+      "path": "results/raw/sqlite/sqlite_die_tablefile_pageflow_fileparallel_fullscan_init_die_latency2_qlc_all_norp_sb_random_row_concurrent_zipf_wp960_cmt_8M_t1.txt",
+      "source_relative_path": "unfold/sqlite_die_tablefile_pageflow_fileparallel_fullscan_init_die_latency2_qlc_all_norp_sb_random_row_concurrent_zipf_wp960_cmt_8M_t1.txt",
+      "bytes": 51697,
+      "sha256": "7291ad2886c54aad48b97c0340986820b4343e8e234b5101c841b3c217f74318",
+      "kind": "sqlite_log"
+    },
+    {
+      "path": "results/raw/sqlite/sqlite_die_tablefile_pageflow_fileparallel_fullscan_init_die_latency3_qlc_all_norp_sb_random_row_concurrent_zipf_wp960_cmt_8M_t1.txt",
+      "source_relative_path": "unfold/sqlite_die_tablefile_pageflow_fileparallel_fullscan_init_die_latency3_qlc_all_norp_sb_random_row_concurrent_zipf_wp960_cmt_8M_t1.txt",
+      "bytes": 56009,
+      "sha256": "7c5d6f35ff25c1aa6ebc265fab62b4aed9bae125db3cbc6dfc985d9edebc2e59",
+      "kind": "sqlite_log"
+    },
+    {
+      "path": "results/raw/sqlite/zipf/19/t1/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency1_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.txt",
+      "source_relative_path": "unfold/zipf/19/t1/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency1_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.txt",
+      "bytes": 142751,
+      "sha256": "39fb8c69cffbbae7143039bcfcf92c507d6f3a321cdab6f599f9a95feb54accc",
+      "kind": "sqlite_log"
+    },
+    {
+      "path": "results/raw/sqlite/zipf/19/t1/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.txt",
+      "source_relative_path": "unfold/zipf/19/t1/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.txt",
+      "bytes": 142277,
+      "sha256": "d7c4e84d1a9522b7c4e42adf74a14edb6c91b6816e511e6b901e9c1fe724da91",
+      "kind": "sqlite_log"
+    },
+    {
+      "path": "results/raw/sqlite/zipf/19/t1/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency2_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.txt",
+      "source_relative_path": "unfold/zipf/19/t1/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency2_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.txt",
+      "bytes": 92748,
+      "sha256": "68984d30ef8141c2a1605e19d773dbc8d265e30f27978994cae989723413d52f",
+      "kind": "sqlite_log"
+    },
+    {
+      "path": "results/raw/sqlite/zipf/19/t1/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency3_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.txt",
+      "source_relative_path": "unfold/zipf/19/t1/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency3_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.txt",
+      "bytes": 126623,
+      "sha256": "021c64bf7db9311b9739ff77ce4d247c58fa771cd9e95453a5bee2ab23573636",
+      "kind": "sqlite_log"
+    },
+    {
+      "path": "results/raw/sqlite/zipf/19/t4/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency1_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t4.txt",
+      "source_relative_path": "unfold/zipf/19/t4/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency1_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t4.txt",
+      "bytes": 204978,
+      "sha256": "4169a7636ddccb8905cd34a274405d2513451cac5a2c5ddc737cf2d49099310b",
+      "kind": "sqlite_log"
+    },
+    {
+      "path": "results/raw/sqlite/zipf/19/t4/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t4.txt",
+      "source_relative_path": "unfold/zipf/19/t4/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t4.txt",
+      "bytes": 204007,
+      "sha256": "04f44a2d2acbed507f9d48ab57e7fbfff7d2e6d4a4d735d41675454454600e84",
+      "kind": "sqlite_log"
+    },
+    {
+      "path": "results/raw/sqlite/zipf/19/t4/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency2_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t4.txt",
+      "source_relative_path": "unfold/zipf/19/t4/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency2_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t4.txt",
+      "bytes": 160639,
+      "sha256": "5f3ed8da9199b69693a92277bcf84528f93a11808d2c6dac8e9996c31d52f8ab",
+      "kind": "sqlite_log"
+    },
+    {
+      "path": "results/raw/sqlite/zipf/19/t4/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency3_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t4.txt",
+      "source_relative_path": "unfold/zipf/19/t4/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency3_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t4.txt",
+      "bytes": 180914,
+      "sha256": "488c1ca55ccc09ba5bd178c5f9b8a7959788c0aefcd4f53b0fbc74b5daed1326",
+      "kind": "sqlite_log"
+    },
+    {
+      "path": "results/raw/sqlite/zipf/19/t8/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency1_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t8.txt",
+      "source_relative_path": "unfold/zipf/19/t8/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency1_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t8.txt",
+      "bytes": 315031,
+      "sha256": "6e61748faabb5dafdb7537614018ecc3cc4e6864d0f034567829d61a9ce5c423",
+      "kind": "sqlite_log"
+    },
+    {
+      "path": "results/raw/sqlite/zipf/19/t8/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t8.txt",
+      "source_relative_path": "unfold/zipf/19/t8/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t8.txt",
+      "bytes": 294462,
+      "sha256": "006ab37f942409bd8bb4059bf9ed5c95a8c7c8a95ec998c9d73cfdad6737ed4b",
+      "kind": "sqlite_log"
+    },
+    {
+      "path": "results/raw/sqlite/zipf/19/t8/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency2_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t8.txt",
+      "source_relative_path": "unfold/zipf/19/t8/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency2_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t8.txt",
+      "bytes": 257285,
+      "sha256": "6215e359cc64dd8d61f9d7ce28824a018381b1969567075804546a4f3a9542d8",
+      "kind": "sqlite_log"
+    },
+    {
+      "path": "results/raw/sqlite/zipf/19/t8/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency3_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t8.txt",
+      "source_relative_path": "unfold/zipf/19/t8/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency3_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t8.txt",
+      "bytes": 280051,
+      "sha256": "e7675977c3a0b400912fe9fb90471d602660fc1cd79369002aef52aa4e772d7b",
+      "kind": "sqlite_log"
+    },
+    {
+      "path": "results/raw/sqlite/zipf/28/t1/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency1_norp_sb_full_scan_concurrent_normal_wp960_cmt_8M_t1.txt",
+      "source_relative_path": "unfold/zipf/28/t1/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency1_norp_sb_full_scan_concurrent_normal_wp960_cmt_8M_t1.txt",
+      "bytes": 110710,
+      "sha256": "5e91f4f410c15132fe979ef9725148b7afded34f5976e666ceaa96e5cbce6a67",
+      "kind": "sqlite_log"
+    },
+    {
+      "path": "results/raw/sqlite/zipf/28/t1/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency1_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.txt",
+      "source_relative_path": "unfold/zipf/28/t1/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency1_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.txt",
+      "bytes": 147824,
+      "sha256": "625e7cd9c7be9609410ace74e99b7917d89f97a1d4844f2b1e300c4b16ffaabf",
+      "kind": "sqlite_log"
+    },
+    {
+      "path": "results/raw/sqlite/zipf/28/t1/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency1_qlc_all_norp_sb_full_scan_concurrent_normal_wp960_cmt_8M_t1.txt",
+      "source_relative_path": "unfold/zipf/28/t1/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency1_qlc_all_norp_sb_full_scan_concurrent_normal_wp960_cmt_8M_t1.txt",
+      "bytes": 122995,
+      "sha256": "72e7bd05f216f03509ab8d10d1411c5c1944a21d8f42872c634f9c3289295d03",
+      "kind": "sqlite_log"
+    },
+    {
+      "path": "results/raw/sqlite/zipf/28/t1/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.txt",
+      "source_relative_path": "unfold/zipf/28/t1/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency1_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.txt",
+      "bytes": 125840,
+      "sha256": "de0acb20e1e1ed6f6cea1b1174b6fc2d16c240231da5d3f5a75662b519ea5dc0",
+      "kind": "sqlite_log"
+    },
+    {
+      "path": "results/raw/sqlite/zipf/28/t1/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency2_qlc_all_norp_sb_full_scan_concurrent_normal_wp960_cmt_8M_t1.txt",
+      "source_relative_path": "unfold/zipf/28/t1/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency2_qlc_all_norp_sb_full_scan_concurrent_normal_wp960_cmt_8M_t1.txt",
+      "bytes": 92121,
+      "sha256": "a4a4087f7124f00de4e1d682f5c991ad3bdfbb2466133545a0fe08e62f97a9fe",
+      "kind": "sqlite_log"
+    },
+    {
+      "path": "results/raw/sqlite/zipf/28/t1/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency2_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.txt",
+      "source_relative_path": "unfold/zipf/28/t1/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency2_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.txt",
+      "bytes": 80719,
+      "sha256": "380edfb6d9267d17ef6d0665d29b95db5f6126f2100c28a4c725889634a8c417",
+      "kind": "sqlite_log"
+    },
+    {
+      "path": "results/raw/sqlite/zipf/28/t1/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency3_qlc_all_norp_sb_full_scan_concurrent_normal_wp960_cmt_8M_t1.txt",
+      "source_relative_path": "unfold/zipf/28/t1/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency3_qlc_all_norp_sb_full_scan_concurrent_normal_wp960_cmt_8M_t1.txt",
+      "bytes": 95650,
+      "sha256": "3ae09a5e3c217c8c7a811aa18f4ca7ff3fd1d1e0048caf67b1b856874e80989c",
+      "kind": "sqlite_log"
+    },
+    {
+      "path": "results/raw/sqlite/zipf/28/t1/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency3_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.txt",
+      "source_relative_path": "unfold/zipf/28/t1/sqlite_die_singlefile_pageflow_fileparallel_fullscan_init_die_latency3_qlc_all_norp_sb_full_scan_concurrent_zipf_wp960_cmt_8M_t1.txt",
+      "bytes": 118594,
+      "sha256": "1010485ae9a3f8ba2ab2efaa98435f532ffcb69e61cd9a7ef76ddfd800ddd237",
+      "kind": "sqlite_log"
+    }
+  ]
+}

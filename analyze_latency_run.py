@@ -121,9 +121,14 @@ def parse_log(path: Path) -> dict[str, object]:
     for raw in path.read_text(errors="replace").splitlines():
         line = raw.strip()
 
+        # Runners append this parser's human-readable report to the raw log.
+        # Do not parse it as new evidence (notably `hung_task=0`).
+        if line.startswith(("kernel_signals:", "verdict:", "outcome:")):
+            continue
+
         if "No free entry" in line:
             kernel_signals["no_free_entry"] += 1
-        if "blocked for more than" in line or "hung_task" in line:
+        if "blocked for more than" in line or re.search(r"\bhung_task\b(?!\s*=)", line):
             kernel_signals["hung_task"] += 1
         if "SLOW_PATH: nvmev_proc_io_sq" in line:
             kernel_signals["slow_proc_io_sq"] += 1
