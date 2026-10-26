@@ -282,6 +282,9 @@ struct ssd {
 	struct ssd_pcie *pcie;
 	struct buffer *write_buffer;
 	unsigned int cpu_nr_dispatcher;
+	/* Observation identity only; -1 until an instrumented FTL initializes it. */
+	int trace_ns_id;
+	int trace_ftl_id;
 };
 
 void ssd_capture_latency_defaults(struct ssdparams *spp);

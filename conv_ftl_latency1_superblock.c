@@ -21,6 +21,8 @@
 #include <linux/moduleparam.h>
 #include <linux/workqueue.h>
 
+/* Keep kernel trace headers ahead of the local NR_NAMESPACES macro. */
+#include "flashweave_trace.h"
 #include "nvmev.h"
 #include "conv_ftl.h"
 #include <linux/debugfs.h>
@@ -3084,6 +3086,56 @@ static inline bool test_phase_enabled(const struct conv_ftl *conv_ftl)
 	return conv_ftl && READ_ONCE(conv_ftl->test_phase_active);
 }
 
+/* Trace state is a snapshot, not a synchronization barrier. A pass ID is
+ * local to this worker invocation; no parent link to NAND commands is inferred.
+ * moved_pages is the migration return value. Retired pages are not observed.
+ */
+static void fw_trace_worker_emit(struct conv_ftl *ftl, u64 op_id,
+		int worker_kind, int decision, int site, int pass_index,
+		const struct line_pool_stats *pressure, int level,
+		s64 budget, s64 moved, int queued, int catchup)
+{
+	struct fw_worker_decision v = { 0 };
+
+	if (!ftl || !ftl->ssd)
+		return;
+	v.call_ns = ktime_get_ns();
+	v.op_id = op_id ? op_id : flashweave_next_trace_id();
+	v.ns_id = ftl->ssd->trace_ns_id; v.ftl_id = ftl->ssd->trace_ftl_id;
+	v.family = 1;
+	v.worker_kind = worker_kind; v.decision = decision; v.site = site;
+	v.pass_index = pass_index; v.flags = FW_FLAG_PARENT_UNSUPPORTED;
+	v.valid_mask = FW_WORKER_PHASE | FW_WORKER_ACTIVE_READS;
+	if (v.ns_id >= 0 && v.ftl_id >= 0)
+		v.valid_mask |= FW_WORKER_ID;
+	v.phase_enabled = test_phase_enabled(ftl);
+	v.pressure = level; v.free_lines = v.total_lines = -1;
+	if (pressure) {
+		v.free_lines = pressure->free; v.total_lines = pressure->total;
+		v.valid_mask |= FW_WORKER_PRESSURE;
+	}
+	v.high_watermark = ftl->slc_high_watermark;
+	v.low_watermark = ftl->slc_gc_free_thres_low;
+	v.target_watermark = ftl->slc_target_watermark;
+	v.active_reads = atomic_read(&ftl->test_phase_active_reads);
+	v.gate = v.streak = v.force_active = -1; v.tokens = -1;
+
+	v.page_bytes = ftl->ssd->sp.pgsz;
+	v.budget_pages = budget; v.moved_pages = moved;
+	v.retired_pages_delta = -1;
+	v.queue_result = queued; v.catchup_passes = catchup;
+	if (budget >= 0) v.valid_mask |= FW_WORKER_BUDGET;
+	if (moved >= 0) v.valid_mask |= FW_WORKER_MOVED;
+	if (queued >= 0) v.valid_mask |= FW_WORKER_QUEUE_RESULT;
+	v.record_ns = ktime_get_ns();
+	trace_worker_decision(&v);
+}
+/* No timestamp/counter collection when this tracepoint is disabled. */
+#define fw_trace_worker(...) do { \
+	if (trace_worker_decision_enabled()) \
+		fw_trace_worker_emit(__VA_ARGS__); \
+} while (0)
+
 static void test_phase_reset_stats(struct conv_ftl *conv_ftl)
 {
 	if (!conv_ftl)
@@ -5917,6 +5969,8 @@ void conv_init_namespace(struct nvmev_ns *ns, uint32_t id, uint64_t size, void *
     for (i = 0; i < nr_parts; i++) {
         ssd = kmalloc(sizeof(struct ssd), GFP_KERNEL);
 		ssd_init(ssd, &spp, cpu_nr_dispatcher);
+		ssd->trace_ns_id = id;
+		ssd->trace_ftl_id = i;
 		conv_init_ftl(&conv_ftls[i], &cpp, ssd);
 	}
 
@@ -9739,7 +9793,11 @@ static void slc_maint_kick(struct conv_ftl *conv_ftl)
 		return;
 	if (!test_phase_enabled(conv_ftl))
 		return;
-	queue_work(conv_ftl->bg_migration_wq, &conv_ftl->slc_maint_work);
+	{
+		bool queued = queue_work(conv_ftl->bg_migration_wq, &conv_ftl->slc_maint_work);
+		fw_trace_worker(conv_ftl, 0, 0, FW_DECISION_KICK, 1, -1,
+			NULL, -1, -1, -1, queued, -1);
+	}
 }
 
 /* worker 端: 按当前压力档决定预算, 跑一轮 SB-level migration + 必要时一次 GC。
@@ -9760,17 +9818,23 @@ static void bg_slc_maint_worker(struct work_struct *work)
 	enum slc_pressure_level level;
 	uint32_t budget = 0;
 	uint32_t moved;
+	u64 trace_pass_id = 0;
 
 	if (!conv_ftl || !conv_ftl->ssd)
 		return;
 	if (!test_phase_enabled(conv_ftl))
 		return;
 
+	if (trace_worker_decision_enabled())
+		trace_pass_id = flashweave_next_trace_id();
 	collect_slc_stats(conv_ftl, &slc_st);
 	level = slc_pressure_level(conv_ftl, &slc_st);
 	conv_ftl->slc_maint_runs++;
-	if (level == SLC_LEVEL_EMERGENCY)
+	if (level == SLC_LEVEL_EMERGENCY) {
+		fw_trace_worker(conv_ftl, trace_pass_id, 0, FW_DECISION_EMERGENCY,
+			2, -1, &slc_st, level, -1, -1, -1, 0);
 		return;
+	}
 
 	switch (level) {
 	case SLC_LEVEL_IDLE_ONLY:
@@ -9792,6 +9856,8 @@ static void bg_slc_maint_worker(struct work_struct *work)
 		break;
 	}
 
+	fw_trace_worker(conv_ftl, trace_pass_id, 0, FW_DECISION_PASS_BEGIN,
+		2, 0, &slc_st, level, budget, -1, -1, 1);
 	moved = 0;
 	if (level >= SLC_LEVEL_EMERGENCY && !slc_has_any_victim(conv_ftl)) {
 		uint32_t hard_moved = 0;
@@ -9810,6 +9876,8 @@ static void bg_slc_maint_worker(struct work_struct *work)
 		(void)do_gc_superblock_slc(conv_ftl, level >= SLC_LEVEL_EMERGENCY);
 	}
 
+	fw_trace_worker(conv_ftl, trace_pass_id, 0, FW_DECISION_PASS_END,
+		2, 0, NULL, level, budget, moved, -1, 1);
 	cond_resched();
 }
 
@@ -10811,6 +10879,8 @@ retry_wb_alloc:
 							slc_maint_kick(conv_ftl);
 							break;
 						case SLC_LEVEL_EMERGENCY:
+							fw_trace_worker(conv_ftl, 0, 3, FW_DECISION_EMERGENCY,
+								8, -1, &slc_stats, level, -1, -1, -1, -1);
 							maintain_slc_free_to_target(conv_ftl, target_die,
 										    &nsecs_latest);
 							swr.stime = max(swr.stime, nsecs_latest);

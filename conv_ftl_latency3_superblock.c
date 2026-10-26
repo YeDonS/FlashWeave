@@ -22,6 +22,8 @@
 #include <linux/workqueue.h>
 #include <linux/jiffies.h>
 
+/* Keep kernel trace headers ahead of the local NR_NAMESPACES macro. */
+#include "flashweave_trace.h"
 #include "nvmev.h"
 #include "conv_ftl.h"
 #include <linux/debugfs.h>
@@ -3108,6 +3110,60 @@ static inline bool test_phase_enabled(const struct conv_ftl *conv_ftl)
 	return conv_ftl && READ_ONCE(conv_ftl->test_phase_active);
 }
 
+/* Trace state is a snapshot, not a synchronization barrier. A pass ID is
+ * local to this worker invocation; no parent link to NAND commands is inferred.
+ * moved_pages is the migration return value. Retired pages are not observed.
+ */
+static void fw_trace_worker_emit(struct conv_ftl *ftl, u64 op_id,
+		int worker_kind, int decision, int site, int pass_index,
+		const struct line_pool_stats *pressure, int level,
+		s64 budget, s64 moved, int queued, int catchup)
+{
+	struct fw_worker_decision v = { 0 };
+
+	if (!ftl || !ftl->ssd)
+		return;
+	v.call_ns = ktime_get_ns();
+	v.op_id = op_id ? op_id : flashweave_next_trace_id();
+	v.ns_id = ftl->ssd->trace_ns_id; v.ftl_id = ftl->ssd->trace_ftl_id;
+	v.family = 3;
+	v.worker_kind = worker_kind; v.decision = decision; v.site = site;
+	v.pass_index = pass_index; v.flags = FW_FLAG_PARENT_UNSUPPORTED;
+	v.valid_mask = FW_WORKER_PHASE | FW_WORKER_ACTIVE_READS;
+	if (v.ns_id >= 0 && v.ftl_id >= 0)
+		v.valid_mask |= FW_WORKER_ID;
+	v.phase_enabled = test_phase_enabled(ftl);
+	v.pressure = level; v.free_lines = v.total_lines = -1;
+	if (pressure) {
+		v.free_lines = pressure->free; v.total_lines = pressure->total;
+		v.valid_mask |= FW_WORKER_PRESSURE;
+	}
+	v.high_watermark = ftl->slc_high_watermark;
+	v.low_watermark = ftl->slc_gc_free_thres_low;
+	v.target_watermark = ftl->slc_target_watermark;
+	v.active_reads = atomic_read(&ftl->test_phase_active_reads);
+	v.gate = v.streak = v.force_active = -1; v.tokens = -1;
+	v.gate = atomic_read(&ftl->latency3_bg_read_priority_gate);
+	v.tokens = atomic64_read(&ftl->test_phase_read_priority_gate_tokens);
+	v.streak = atomic_read(&ftl->latency3_read_priority_yield_streak);
+	v.force_active = atomic_read(&ftl->latency3_read_priority_force_active);
+	v.valid_mask |= FW_WORKER_PRIORITY_STATE;
+	v.page_bytes = ftl->ssd->sp.pgsz;
+	v.budget_pages = budget; v.moved_pages = moved;
+	v.retired_pages_delta = -1;
+	v.queue_result = queued; v.catchup_passes = catchup;
+	if (budget >= 0) v.valid_mask |= FW_WORKER_BUDGET;
+	if (moved >= 0) v.valid_mask |= FW_WORKER_MOVED;
+	if (queued >= 0) v.valid_mask |= FW_WORKER_QUEUE_RESULT;
+	v.record_ns = ktime_get_ns();
+	trace_worker_decision(&v);
+}
+/* No timestamp/counter collection when this tracepoint is disabled. */
+#define fw_trace_worker(...) do { \
+	if (trace_worker_decision_enabled()) \
+		fw_trace_worker_emit(__VA_ARGS__); \
+} while (0)
+
 static void test_phase_reset_stats(struct conv_ftl *conv_ftl)
 {
 	if (!conv_ftl)
@@ -3482,6 +3538,8 @@ static void latency3_read_priority_note_yield(struct conv_ftl *conv_ftl)
 		atomic64_inc(&conv_ftl->test_phase_read_priority_yields);
 		atomic_inc(&conv_ftl->latency3_read_priority_yield_streak);
 		conv_ftl->slc_sb_fold_yield_read_prio++;
+		fw_trace_worker(conv_ftl, 0, -1, FW_DECISION_YIELD, 3, -1,
+			NULL, -1, -1, -1, -1, -1);
 	}
 }
 
@@ -6173,6 +6231,8 @@ void conv_init_namespace(struct nvmev_ns *ns, uint32_t id, uint64_t size, void *
     for (i = 0; i < nr_parts; i++) {
         ssd = kmalloc(sizeof(struct ssd), GFP_KERNEL);
 		ssd_init(ssd, &spp, cpu_nr_dispatcher);
+		ssd->trace_ns_id = id;
+		ssd->trace_ftl_id = i;
 		conv_init_ftl(&conv_ftls[i], &cpp, ssd);
 	}
 
@@ -10093,12 +10153,23 @@ static unsigned long latency3_requeue_delay_jiffies(void)
 static bool latency3_queue_read_priority_delayed_work(struct conv_ftl *conv_ftl,
 						      struct delayed_work *dwork)
 {
+	bool queued;
+	int kind;
+
 	if (!conv_ftl || !conv_ftl->bg_migration_wq || !dwork)
 		return false;
 	if (!test_phase_enabled(conv_ftl))
 		return false;
-	return queue_delayed_work(conv_ftl->bg_migration_wq, dwork,
+	queued = queue_delayed_work(conv_ftl->bg_migration_wq, dwork,
 				  latency3_requeue_delay_jiffies());
+	if (trace_worker_decision_enabled()) {
+		kind = dwork == &conv_ftl->latency3_slc_maint_delayed_work ? 0 :
+			(dwork == &conv_ftl->latency3_repromotion_delayed_work ? 1 :
+			 (dwork == &conv_ftl->latency3_qlc_rebalance_delayed_work ? 2 : -1));
+		fw_trace_worker_emit(conv_ftl, 0, kind, FW_DECISION_REQUEUE, 5 + kind,
+			-1, NULL, -1, -1, -1, queued, -1);
+	}
+	return queued;
 }
 
 static void latency3_slc_maint_delayed_requeue(struct conv_ftl *conv_ftl)
@@ -10146,6 +10217,9 @@ static bool latency3_read_priority_should_force_progress(struct conv_ftl *conv_f
 	if (streak < NVMEV_LATENCY3_FORCE_AFTER_YIELDS)
 		return false;
 
+	fw_trace_worker(conv_ftl, 0, 0, FW_DECISION_FORCED, 4, -1,
+		NULL, level, -1, -1, -1,
+		min_t(uint32_t, streak, NVMEV_LATENCY3_FORCE_CATCHUP_MAX));
 	atomic64_inc(&conv_ftl->test_phase_read_priority_forced_progress_runs);
 	atomic_set(&conv_ftl->latency3_read_priority_yield_streak, 0);
 	catchup = min_t(uint32_t, streak, NVMEV_LATENCY3_FORCE_CATCHUP_MAX);
@@ -10174,8 +10248,11 @@ static void slc_maint_kick(struct conv_ftl *conv_ftl)
 
 	if (should_yield)
 		latency3_slc_maint_delayed_requeue(conv_ftl);
-	else
-		queue_work(conv_ftl->bg_migration_wq, &conv_ftl->slc_maint_work);
+	else {
+		bool queued = queue_work(conv_ftl->bg_migration_wq, &conv_ftl->slc_maint_work);
+		fw_trace_worker(conv_ftl, 0, 0, FW_DECISION_KICK, 1, -1,
+			NULL, -1, -1, -1, queued, -1);
+	}
 }
 
 /* worker 端: 按当前压力档决定预算, 跑一轮 SB-level migration + 必要时一次 GC。
@@ -10199,15 +10276,20 @@ static void latency3_bg_slc_maint_run(struct conv_ftl *conv_ftl)
 	uint32_t pass;
 	bool force_progress;
 	bool force_after_yields;
+	u64 trace_pass_id = 0;
 
 	if (!conv_ftl || !conv_ftl->ssd)
 		return;
 	if (!test_phase_enabled(conv_ftl))
 		return;
 
+	if (trace_worker_decision_enabled())
+		trace_pass_id = flashweave_next_trace_id();
 	collect_slc_stats(conv_ftl, &slc_st);
 	level = slc_pressure_level(conv_ftl, &slc_st);
 	if (level < SLC_LEVEL_BG) {
+		fw_trace_worker(conv_ftl, trace_pass_id, 0, FW_DECISION_SKIP,
+			2, -1, &slc_st, level, -1, -1, -1, 0);
 		latency3_read_priority_note_progress(conv_ftl);
 		return;
 	}
@@ -10217,6 +10299,9 @@ static void latency3_bg_slc_maint_run(struct conv_ftl *conv_ftl)
 	if (!force_after_yields)
 		catchup_passes = 1;
 	force_progress = (level >= SLC_LEVEL_EMERGENCY) || force_after_yields;
+	if (level >= SLC_LEVEL_EMERGENCY)
+		fw_trace_worker(conv_ftl, trace_pass_id, 0, FW_DECISION_EMERGENCY,
+			2, -1, &slc_st, level, -1, -1, -1, catchup_passes);
 
 	atomic_inc(&conv_ftl->latency3_bg_read_priority_gate);
 #if defined(NVMEV_TEST_PHASE_READ_PRIORITY_DIAG) && NVMEV_TEST_PHASE_READ_PRIORITY_DIAG
@@ -10262,6 +10347,8 @@ static void latency3_bg_slc_maint_run(struct conv_ftl *conv_ftl)
 			break;
 		}
 
+		fw_trace_worker(conv_ftl, trace_pass_id, 0, FW_DECISION_PASS_BEGIN,
+			2, pass, &slc_st, level, budget, -1, -1, catchup_passes);
 		moved = 0;
 		if (level >= SLC_LEVEL_EMERGENCY && !slc_has_any_victim(conv_ftl)) {
 			uint32_t hard_moved = 0;
@@ -10280,6 +10367,8 @@ static void latency3_bg_slc_maint_run(struct conv_ftl *conv_ftl)
 		if (conv_ftl->slc_sb_migrated_victim_count)
 			(void)do_gc_superblock_slc(conv_ftl,
 						   level >= SLC_LEVEL_EMERGENCY);
+		fw_trace_worker(conv_ftl, trace_pass_id, 0, FW_DECISION_PASS_END,
+			2, pass, NULL, level, budget, moved, -1, catchup_passes);
 		cond_resched();
 	}
 	if (force_progress)
@@ -11350,6 +11439,8 @@ retry_wb_alloc:
 							slc_maint_kick(conv_ftl);
 							break;
 						case SLC_LEVEL_EMERGENCY:
+							fw_trace_worker(conv_ftl, 0, 3, FW_DECISION_EMERGENCY,
+								8, -1, &slc_stats, level, -1, -1, -1, -1);
 							maintain_slc_free_to_target(conv_ftl, target_die,
 										    &nsecs_latest);
 							swr.stime = max(swr.stime, nsecs_latest);

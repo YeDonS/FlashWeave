@@ -51,4 +51,6 @@ Larger heat archives, drafts, presentations, dry-run manifests and summary-only 
 
 ## Next-run metadata
 
+The [native experiment protocol](../docs/EXPERIMENTS.md) now supplies the four-cell/five-seed execution and trace collection path. **DATA REQUIRED:** no new Linux device runs, matched-repeat latency samples, full model-drain evidence or causal scheduling results are added by that implementation. Keep generated runs outside this frozen archive until their manifests and raw outputs are reviewed.
+
 Record source commit, staged-input hashes, module SHA-256, kernel, CPU/NUMA/memory reservation, SSD configuration, compile flags, device identity, full command/configuration, explicit seed, exit code and scoped kernel log. Capture counters before/after measurement and after maintenance drains. Run matched seeds and report regressions as well as improvements.

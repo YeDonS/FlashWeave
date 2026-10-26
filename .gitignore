@@ -17,4 +17,7 @@ tags
 /device/
 /evaluation/result/
 /evaluation/device/
+# Machine-specific experiment settings and generated runs are local.
+/experiments/host_config.sh
+/experiment-runs/
 # results/raw is a reviewed, deliberately versioned archive. Do not ignore it.

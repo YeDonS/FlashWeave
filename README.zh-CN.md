@@ -66,6 +66,8 @@ SQLite 日志作为诊断资料保留：其中包含不同操作类型、缺失�
 
 ## 准备 Linux 实验工作区
 
+新的消融和重复实验使用[完整实验协议](docs/EXPERIMENTS.md)：填写一个机器配置文件，预览并构建，先跑四组pilot，再跑5个配对种子、共20次正式实验。入口保留JSON+直方图、源代码/构建身份、严格阶段边界、B/F/Q计数及独立调度追踪诊断。新设备结果在实际运行前继续标为 **DATA REQUIRED**；下面的手工组装入口保留给其它变体。
+
 ```bash
 python3 tools/prepare_workspace.py --output .workspaces/nvmevirt
 cd .workspaces/nvmevirt/nvmevirt_DA
