@@ -5,11 +5,12 @@
 #include <linux/math64.h>
 #include <linux/moduleparam.h>
 
-#include "nvmev.h"
-#include "ssd.h"
-
+/* Parse kernel trace/perf headers before ssd_config.h defines NR_NAMESPACES. */
 #define CREATE_TRACE_POINTS
 #include "flashweave_trace.h"
+
+#include "nvmev.h"
+#include "ssd.h"
 
 static atomic64_t flashweave_trace_seq = ATOMIC64_INIT(0);
 

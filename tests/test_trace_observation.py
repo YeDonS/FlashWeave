@@ -301,6 +301,12 @@ int main(void) {
         self.assertIn("#define TRACE_INCLUDE_PATH .", header)
         self.assertIn("#define TRACE_SYSTEM flashweave", header)
         self.assertEqual(self.current.count("#define CREATE_TRACE_POINTS"), 1)
+        # ssd_config.h's NR_NAMESPACES macro collides with the perf header enum
+        # when CREATE_TRACE_POINTS causes perf definitions to be read too late.
+        for name in ["ssd_die.c", "conv_ftl_latency1_superblock.c", "conv_ftl_latency3_superblock.c"]:
+            source = (ROOT / name).read_text()
+            self.assertLess(source.index('#include "flashweave_trace.h"'),
+                            source.index('#include "nvmev.h"'), name)
         for name in ["nand_schedule", "resource_schedule", "worker_decision"]:
             fields = re.search(r"struct fw_" + name + r" \{(.*?)\};", header, re.S).group(1)
             keys = re.findall(r"\b(\w+);", fields)

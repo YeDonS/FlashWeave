@@ -22,9 +22,10 @@
 #include <linux/workqueue.h>
 #include <linux/jiffies.h>
 
+/* Keep kernel trace headers ahead of the local NR_NAMESPACES macro. */
+#include "flashweave_trace.h"
 #include "nvmev.h"
 #include "conv_ftl.h"
-#include "flashweave_trace.h"
 #include <linux/debugfs.h>
 #include <linux/seq_file.h>
 #ifndef NVMEV_WARN
