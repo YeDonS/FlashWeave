@@ -68,6 +68,8 @@ SQLite logs are retained as a diagnostic collection. They contain different oper
 
 ## Prepare a Linux experiment workspace
 
+New matched runs should use the [four-cell experiment protocol](docs/EXPERIMENTS.md): configure one host file, preview/build, run a four-cell pilot, then execute five paired seeds (20 runs). It retains JSON+ histograms, source/build identity, strict phase boundaries, B/F/Q counters and separate scheduler trace diagnostics. New measured results remain **DATA REQUIRED** until the configured Linux host actually runs them. The manual workspace commands below remain available for other variants.
+
 ```bash
 python3 tools/prepare_workspace.py --output .workspaces/nvmevirt
 cd .workspaces/nvmevirt/nvmevirt_DA

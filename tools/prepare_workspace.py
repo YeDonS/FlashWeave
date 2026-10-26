@@ -9,7 +9,7 @@ import shutil
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-MODULE_PATTERNS = ("conv_ftl*.c", "conv_ftl*.h", "ssd*.c", "ssd*.h", "channel_model.*", "main.c", "io.c", "admin.c", "nvmev.h", "build_die.sh")
+MODULE_PATTERNS = ("conv_ftl*.c", "conv_ftl*.h", "ssd*.c", "ssd*.h", "channel_model.*", "main.c", "io.c", "admin.c", "nvmev.h", "flashweave_trace.h", "build_die.sh")
 WORKLOAD_PATTERNS = ("sqlite_*.c", "sqlite_*.sh", "fio_*", "fileserver_*", "run_sqlite_then_fio_die_variants.sh", "analyze_latency_run.py", "plot_table_die_transition.py", "test_analyze_latency_run.py")
 
 
@@ -42,12 +42,22 @@ def prepare(root: Path, output: Path) -> dict:
                         target = destination / source.name
                     target.parent.mkdir(parents=True, exist_ok=True)
                     shutil.copy2(source, target)
+    # Versioned experiment helpers travel with the exact staged module sources.
+    # phase_hook keeps its historical runtime basename for generated runner calls.
+    experiments = root / "experiments"
+    if experiments.is_dir():
+        for source in sorted(experiments.iterdir()):
+            if source.is_file() and source.suffix in (".py", ".sh", ".csv") and not source.name.startswith("test_"):
+                name = "protocol_hook.py" if source.name == "phase_hook.py" else source.name
+                shutil.copy2(source, evaluation / name)
     # The inherited Makefile ignores build_die.sh's integrated-ablation flags.
     # Wire them into Kbuild in the disposable workspace only.
     makefile = module / "Makefile"
     text = makefile.read_text()
     if "ccflags-y += $(NVMEV_EXTRA_CFLAGS)" not in text:
         text = "# Forward build_die.sh ablation flags to Kbuild.\nccflags-y += $(NVMEV_EXTRA_CFLAGS)\n\n" + text
+    if "ccflags-y += -I$(src)" not in text:
+        text = "# trace/define_trace.h re-includes the local trace header.\nccflags-y += -I$(src)\n" + text
     makefile.write_text(text)
     inputs = {}
     for path in sorted(output.rglob("*")):

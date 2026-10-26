@@ -8,6 +8,57 @@
 #include "nvmev.h"
 #include "ssd.h"
 
+#define CREATE_TRACE_POINTS
+#include "flashweave_trace.h"
+
+static atomic64_t flashweave_trace_seq = ATOMIC64_INIT(0);
+
+u64 flashweave_next_trace_id(void)
+{
+	return (u64)atomic64_inc_return(&flashweave_trace_seq);
+}
+
+struct fw_trace_context {
+	struct fw_nand_schedule nand;
+	u32 segment_id;
+};
+
+static void fw_trace_context_init(struct fw_trace_context *ctx, struct ssd *ssd)
+{
+	memset(ctx, 0, sizeof(*ctx));
+	ctx->nand.op_id = flashweave_next_trace_id();
+	ctx->nand.call_ns = ktime_get_ns();
+	ctx->nand.ns_id = ssd->trace_ns_id;
+	ctx->nand.ftl_id = ssd->trace_ftl_id;
+	ctx->nand.cmd = ctx->nand.type = -1;
+	ctx->nand.ch = ctx->nand.lun = ctx->nand.plane = -1;
+	ctx->nand.block = ctx->nand.page = ctx->nand.zone = -1;
+	ctx->nand.flags = FW_FLAG_PARENT_UNSUPPORTED;
+	if (ssd->trace_ns_id >= 0 && ssd->trace_ftl_id >= 0)
+		ctx->nand.valid_mask |= FW_VALID_ID;
+}
+
+/* Called only behind the resource tracepoint static key. */
+static void fw_trace_resource_init(struct fw_resource_schedule *v,
+				  struct fw_trace_context *ctx, int resource,
+				  u64 ready, u64 length)
+{
+	struct fw_nand_schedule *n = &ctx->nand;
+
+	memset(v, 0, sizeof(*v));
+	v->call_ns = ktime_get_ns();
+	v->op_id = n->op_id;
+	v->ns_id = n->ns_id; v->ftl_id = n->ftl_id;
+	v->cmd = n->cmd; v->type = n->type; v->priority = n->priority;
+	v->valid_mask = (n->valid_mask &
+		(FW_VALID_ID | FW_VALID_PPA | FW_VALID_ZONE)) | FW_VALID_READY;
+	v->flags = n->flags;
+	v->ch = n->ch; v->lun = n->lun; v->plane = n->plane;
+	v->block = n->block; v->page = n->page; v->zone = n->zone;
+	v->xfer_bytes = length; v->ready_ns = ready;
+	v->resource = resource; v->segment_id = ctx->segment_id++;
+}
+
 static int gc_nand_timing = 0;
 module_param(gc_nand_timing, int, 0664);
 
@@ -651,6 +702,8 @@ void ssd_init(struct ssd *ssd, struct ssdparams *spp, uint32_t cpu_nr_dispatcher
 
 	ssd->sp = *spp;
 	ssd->cpu_nr_dispatcher = cpu_nr_dispatcher;
+	ssd->trace_ns_id = -1;
+	ssd->trace_ftl_id = -1;
 
 	ssd->ch = kmalloc(sizeof(struct ssd_channel) * spp->nchs, GFP_KERNEL); // 40 * 8 = 320
 	if (!ssd->ch) {
@@ -756,20 +809,50 @@ static uint64_t ssd_advance_pcie_internal(struct ssd *ssd,
 					  uint64_t request_time,
 					  uint64_t length,
 					  bool read_priority,
-					  bool low_priority)
+					  bool low_priority,
+					  struct fw_trace_context *ctx)
 {
 	struct ssd_pcie *pcie;
 	uint64_t start, end;
+	struct fw_trace_context standalone;
+	struct fw_resource_schedule tr;
+	bool tracing = trace_resource_schedule_enabled();
 
 	if (!ssd || !ssd->pcie || !ssd->pcie->perf_model)
 		return request_time;
 	pcie = ssd->pcie;
+	if (tracing) {
+		if (!ctx) {
+			fw_trace_context_init(&standalone, ssd);
+			standalone.nand.priority = read_priority ? 1 : (low_priority ? 2 : 0);
+			standalone.nand.flags |= FW_FLAG_STANDALONE;
+			ctx = &standalone;
+		}
+		fw_trace_resource_init(&tr, ctx, 2, request_time, length);
+	}
 	spin_lock(&pcie->timing_lock);
+	if (tracing) {
+		tr.issue_ns = ktime_get_ns();
+		tr.old_hp_ns = pcie->hp_next_pcie_avail_time;
+		tr.old_lp_ns = pcie->lp_next_pcie_avail_time;
+		tr.old_normal_ns = pcie->next_pcie_avail_time;
+	}
 
 	if (!read_priority && !low_priority) {
 		request_time = max(pcie->next_pcie_avail_time, request_time);
 		end = chmodel_request(pcie->perf_model, request_time, length);
 		ssd_pcie_commit_normal(pcie, end);
+		if (tracing)
+			tr.flags |= FW_FLAG_START_UNOBSERVED;
+		if (tracing) {
+			tr.model_end_ns = end;
+			tr.valid_mask |= FW_VALID_MODEL_END | FW_VALID_RESERVATION;
+			tr.new_hp_ns = pcie->hp_next_pcie_avail_time;
+			tr.new_lp_ns = pcie->lp_next_pcie_avail_time;
+			tr.new_normal_ns = pcie->next_pcie_avail_time;
+			tr.record_ns = ktime_get_ns();
+			trace_resource_schedule(&tr);
+		}
 		spin_unlock(&pcie->timing_lock);
 		return end;
 	}
@@ -786,13 +869,26 @@ static uint64_t ssd_advance_pcie_internal(struct ssd *ssd,
 		ssd_pcie_commit_read_priority(pcie, start, end);
 	else
 		ssd_pcie_commit_low_priority(pcie, end);
+	if (tracing) {
+		tr.model_start_ns = start;
+		tr.valid_mask |= FW_VALID_MODEL_START;
+	}
+	if (tracing) {
+		tr.model_end_ns = end;
+		tr.valid_mask |= FW_VALID_MODEL_END | FW_VALID_RESERVATION;
+		tr.new_hp_ns = pcie->hp_next_pcie_avail_time;
+		tr.new_lp_ns = pcie->lp_next_pcie_avail_time;
+		tr.new_normal_ns = pcie->next_pcie_avail_time;
+		tr.record_ns = ktime_get_ns();
+		trace_resource_schedule(&tr);
+	}
 	spin_unlock(&pcie->timing_lock);
 	return end;
 }
 
 uint64_t ssd_advance_pcie(struct ssd *ssd, uint64_t request_time, uint64_t length)
 {
-	return ssd_advance_pcie_internal(ssd, request_time, length, false, false);
+	return ssd_advance_pcie_internal(ssd, request_time, length, false, false, NULL);
 }
 
 /* Write buffer Performance Model
@@ -825,7 +921,7 @@ uint64_t ssd_advance_write_buffer_low_priority(struct ssd *ssd,
 	nsecs_latest += spp->fw_wbuf_lat0;
 	nsecs_latest += spp->fw_wbuf_lat1 * DIV_ROUND_UP(length, KB(4));
 	nsecs_latest = ssd_advance_pcie_internal(ssd, nsecs_latest, length,
-						 false, true);
+						 false, true, NULL);
 	return nsecs_latest;
 }
 
@@ -950,18 +1046,40 @@ static uint64_t ssd_advance_channel(struct ssd_channel *ch,
 				    uint64_t request_time,
 				    uint64_t length,
 				    bool read_priority,
-				    bool low_priority)
+				    bool low_priority,
+				    struct fw_trace_context *ctx)
 {
 	uint64_t start, end;
+	struct fw_resource_schedule tr;
+	bool tracing = ctx && trace_resource_schedule_enabled();
 
 	if (!ch || !ch->perf_model)
 		return request_time;
+	if (tracing)
+		fw_trace_resource_init(&tr, ctx, 1, request_time, length);
 	spin_lock(&ch->timing_lock);
+	if (tracing) {
+		tr.issue_ns = ktime_get_ns();
+		tr.old_hp_ns = ch->hp_next_ch_avail_time;
+		tr.old_lp_ns = ch->lp_next_ch_avail_time;
+		tr.old_normal_ns = ch->next_ch_avail_time;
+	}
 
 	if (!read_priority && !low_priority) {
 		request_time = max(ch->next_ch_avail_time, request_time);
 		end = chmodel_request(ch->perf_model, request_time, length);
 		ssd_channel_commit_normal(ch, end);
+		if (tracing)
+			tr.flags |= FW_FLAG_START_UNOBSERVED;
+		if (tracing) {
+			tr.model_end_ns = end;
+			tr.valid_mask |= FW_VALID_MODEL_END | FW_VALID_RESERVATION;
+			tr.new_hp_ns = ch->hp_next_ch_avail_time;
+			tr.new_lp_ns = ch->lp_next_ch_avail_time;
+			tr.new_normal_ns = ch->next_ch_avail_time;
+			tr.record_ns = ktime_get_ns();
+			trace_resource_schedule(&tr);
+		}
 		spin_unlock(&ch->timing_lock);
 		return end;
 	}
@@ -979,6 +1097,19 @@ static uint64_t ssd_advance_channel(struct ssd_channel *ch,
 		ssd_channel_commit_read_priority(ch, start, end);
 	else
 		ssd_channel_commit_low_priority(ch, end);
+	if (tracing) {
+		tr.model_start_ns = start;
+		tr.valid_mask |= FW_VALID_MODEL_START;
+	}
+	if (tracing) {
+		tr.model_end_ns = end;
+		tr.valid_mask |= FW_VALID_MODEL_END | FW_VALID_RESERVATION;
+		tr.new_hp_ns = ch->hp_next_ch_avail_time;
+		tr.new_lp_ns = ch->lp_next_ch_avail_time;
+		tr.new_normal_ns = ch->next_ch_avail_time;
+		tr.record_ns = ktime_get_ns();
+		trace_resource_schedule(&tr);
+	}
 	spin_unlock(&ch->timing_lock);
 	return end;
 }
@@ -987,6 +1118,10 @@ static uint64_t ssd_advance_nand_internal(struct ssd *ssd, struct nand_cmd *ncmd
 					  bool force_read_priority,
 					  bool force_low_priority)
 {
+	struct fw_trace_context trace_ctx;
+	bool tracing = trace_nand_schedule_enabled() || trace_resource_schedule_enabled();
+	u64 trace_call_ns = tracing ? ktime_get_ns() : 0;
+
 	    /* Defensive checks to avoid NULL deref and invalid operations */
 	    uint64_t safe_now;
 	    if (unlikely(!ssd)) {
@@ -1006,8 +1141,27 @@ static uint64_t ssd_advance_nand_internal(struct ssd *ssd, struct nand_cmd *ncmd
     int c = ncmd->cmd;
     uint64_t cmd_stime = (ncmd->stime == 0) ? safe_now : ncmd->stime;
 
-    if (ncmd->type == GC_IO && !gc_nand_timing)
+    if (tracing) {
+		fw_trace_context_init(&trace_ctx, ssd);
+		trace_ctx.nand.call_ns = trace_call_ns;
+		trace_ctx.nand.cmd = c;
+		trace_ctx.nand.type = ncmd->type;
+		trace_ctx.nand.priority = force_read_priority && ncmd->type == USER_IO && c == NAND_READ ?
+			1 : (force_low_priority ? 2 : 0);
+		trace_ctx.nand.xfer_bytes = ncmd->xfer_size;
+		trace_ctx.nand.cmd_ready_ns = cmd_stime;
+		trace_ctx.nand.valid_mask |= FW_VALID_READY;
+	}
+    if (ncmd->type == GC_IO && !gc_nand_timing) {
+		if (tracing && trace_nand_schedule_enabled()) {
+			trace_ctx.nand.status = 1;
+			trace_ctx.nand.completion_target_ns = cmd_stime;
+			trace_ctx.nand.valid_mask |= FW_VALID_COMPLETION_TARGET;
+			trace_ctx.nand.record_ns = ktime_get_ns();
+			trace_nand_schedule(&trace_ctx.nand);
+		}
         return cmd_stime;
+	}
 	uint64_t nand_stime, nand_etime;
 	uint64_t chnl_stime, chnl_etime;
 	uint64_t remaining, xfer_size, completed_time;
@@ -1063,7 +1217,19 @@ static uint64_t ssd_advance_nand_internal(struct ssd *ssd, struct nand_cmd *ncmd
 	/* 判断是否为 QLC 块 */
 	is_qlc = is_qlc_block_ssd(ssd, ppa->g.blk);
 
+	if (tracing) {
+		trace_ctx.nand.ch = ppa->g.ch; trace_ctx.nand.lun = ppa->g.lun;
+		trace_ctx.nand.plane = ppa->g.pl; trace_ctx.nand.block = ppa->g.blk;
+		trace_ctx.nand.page = ppa->g.pg;
+		trace_ctx.nand.valid_mask |= FW_VALID_PPA;
+	}
 	spin_lock(&lun->timing_lock);
+	if (tracing) {
+		trace_ctx.nand.issue_ns = ktime_get_ns();
+		trace_ctx.nand.old_hp_ns = lun->hp_next_lun_avail_time;
+		trace_ctx.nand.old_lp_ns = lun->lp_next_lun_avail_time;
+		trace_ctx.nand.old_normal_ns = lun->next_lun_avail_time;
+	}
 	switch (c) {
 		case NAND_READ:
 			/* read: perform NAND cmd first */
@@ -1106,6 +1272,10 @@ static uint64_t ssd_advance_nand_internal(struct ssd *ssd, struct nand_cmd *ncmd
 			uint32_t zone = cur_pg ? cur_pg->qlc_latency_zone : 0;
 			if (zone >= ARRAY_SIZE(spp->qlc_pg_rd_lat))
 				zone = ARRAY_SIZE(spp->qlc_pg_rd_lat) - 1;
+			if (tracing) {
+				trace_ctx.nand.zone = zone;
+				trace_ctx.nand.valid_mask |= FW_VALID_ZONE;
+			}
 			if (ncmd->xfer_size == 4096) {
 				nand_etime = nand_stime + spp->qlc_pg_4kb_rd_lat[zone];
 			} else {
@@ -1138,14 +1308,14 @@ static uint64_t ssd_advance_nand_internal(struct ssd *ssd, struct nand_cmd *ncmd
 					chnl_etime = ssd_advance_channel(ch, chnl_stime,
 									 xfer_size,
 									 read_priority,
-									 low_priority);
+									 low_priority, tracing ? &trace_ctx : NULL);
 
 					if (ncmd->interleave_pci_dma) {
 						completed_time =
 							ssd_advance_pcie_internal(ssd, chnl_etime,
 										 xfer_size,
 										 read_priority,
-										 low_priority);
+										 low_priority, tracing ? &trace_ctx : NULL);
 					} else {
 						completed_time = chnl_etime;
 					}
@@ -1173,7 +1343,7 @@ static uint64_t ssd_advance_nand_internal(struct ssd *ssd, struct nand_cmd *ncmd
 									 false, low_priority);
 					chnl_etime = ssd_advance_channel(ch, chnl_stime,
 									 ncmd->xfer_size,
-									 false, low_priority);
+									 false, low_priority, tracing ? &trace_ctx : NULL);
 					nand_stime = chnl_etime;
 				}
 
@@ -1221,6 +1391,52 @@ static uint64_t ssd_advance_nand_internal(struct ssd *ssd, struct nand_cmd *ncmd
 		NVMEV_ERROR("Unsupported NAND command: 0x%x\n", c);
 		completed_time = 0;
 		break;
+	}
+	if (tracing) {
+		struct fw_nand_schedule *n = &trace_ctx.nand;
+		struct fw_resource_schedule tr;
+
+		n->new_hp_ns = lun->hp_next_lun_avail_time;
+		n->new_lp_ns = lun->lp_next_lun_avail_time;
+		n->new_normal_ns = lun->next_lun_avail_time;
+		n->valid_mask |= FW_VALID_RESERVATION;
+		if (c == NAND_READ || c == NAND_WRITE || c == NAND_ERASE) {
+			n->model_start_ns = nand_stime;
+			n->model_end_ns = nand_etime;
+			n->reservation_end_ns = (c == NAND_READ && ncmd->type != GC_IO) ?
+				chnl_etime : nand_etime;
+			n->completion_target_ns = completed_time;
+			n->valid_mask |= FW_VALID_MODEL_START | FW_VALID_MODEL_END |
+				FW_VALID_COMPLETION_TARGET;
+		} else if (c == NAND_NOP) {
+			n->status = 2;
+			n->reservation_end_ns = nand_stime;
+			n->completion_target_ns = completed_time;
+			n->valid_mask |= FW_VALID_COMPLETION_TARGET;
+		} else {
+			n->status = 3;
+		}
+		n->record_ns = ktime_get_ns();
+		if (trace_nand_schedule_enabled())
+			trace_nand_schedule(n);
+		if (trace_resource_schedule_enabled() && n->status != 3) {
+			fw_trace_resource_init(&tr, &trace_ctx, 0, cmd_stime, ncmd->xfer_size);
+			/* The LUN reservation includes host-read channel transfer. */
+			tr.call_ns = n->call_ns; tr.issue_ns = n->issue_ns;
+			tr.model_start_ns = n->model_start_ns;
+			tr.model_end_ns = n->reservation_end_ns;
+			tr.valid_mask |= FW_VALID_RESERVATION | FW_VALID_MODEL_END;
+			if (n->valid_mask & FW_VALID_MODEL_START)
+				tr.valid_mask |= FW_VALID_MODEL_START;
+			tr.old_hp_ns = n->old_hp_ns; tr.old_lp_ns = n->old_lp_ns;
+			tr.old_normal_ns = n->old_normal_ns;
+			tr.new_hp_ns = n->new_hp_ns; tr.new_lp_ns = n->new_lp_ns;
+			tr.new_normal_ns = n->new_normal_ns;
+			if (c == NAND_READ && ncmd->type != GC_IO)
+				tr.flags |= FW_FLAG_LUN_INCLUDES_CHANNEL;
+			tr.record_ns = ktime_get_ns();
+			trace_resource_schedule(&tr);
+		}
 	}
 	spin_unlock(&lun->timing_lock);
 

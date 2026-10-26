@@ -1,5 +1,7 @@
 # Reproduction runbook / 复现指南
 
+For new matched four-cell ablation and repeated experiments, use the [native experiment protocol](EXPERIMENTS.md). It freezes sources/builds, executes synchronous phases, validates histogram counts and supports separate trace diagnostics. The commands below also document historical/manual paths.
+
 ## A. Verify archived results on Linux or macOS
 
 Requirements: Python 3.9+. These steps do not require root, a kernel module or a block device.
@@ -77,7 +79,7 @@ FIO_MEASURE_READ_BYTES=5G FIO_MEASURE_WRITE_BYTES=512M \
 bash fio_fragment_die_latency_mixed.sh
 ```
 
-This selects the archived byte volumes but does not reconstruct the original machine, binary or random stream. Runner defaults have changed; inspect generated jobs rather than assuming defaults reproduce a historical run. The archived measured write region spans 9,126,805,504 bytes at offset 8 GiB; current default region sizing differs.
+This selects the archived byte volumes but does not reconstruct the original machine, binary or random stream. Runner defaults have changed; inspect generated jobs rather than assuming defaults reproduce a historical run. For the archived fio-3.16 path, offset=8 GiB and size/end=9,126,805,504 bytes describe a 512 MiB address span, [8, 8.5 GiB), because that implementation subtracts offset from size. Pin the version; do not treat the absolute size/end value as the span.
 
 Before a measured run, record the exact generated job, explicit random seeds, source/module hashes, runtime controls and scoped kernel capture. Capture counter baselines, measured-phase counters and post-drain counters separately. Use matched repeated seeds across variants. Validate requested versus completed bytes before calculating latency differences.
 
